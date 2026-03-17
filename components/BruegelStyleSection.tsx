@@ -8,7 +8,7 @@ export default function BruegelStyleSection() {
 
       {/* 🔥 BACKGROUND IMAGE (ONLY ONCE) */}
       <Image
-        src="/assets/lottie/bg-cardCover.png" // replace with your image
+        src="/assets/lottie/HeroEx.svg" // replace with your image
         alt="Background"
         fill
         priority

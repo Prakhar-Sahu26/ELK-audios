@@ -216,6 +216,16 @@ export default function BoutiqueArchitecturalPage() {
       pointer-events: none;
     }
 
+    .boutique-three-col {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    background: #0c1136;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
+
     /* Zone image - right side with mask, overlays images */
     .zone-image {
       position: absolute;
@@ -490,6 +500,52 @@ export default function BoutiqueArchitecturalPage() {
       font-size: 3.5rem;
       z-index: 9;
     }
+
+
+    // changed 
+
+/* ================= FINAL MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+
+  .boutique-three-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .boutique-three-col__cell--content {
+    order: 1;
+  }
+
+  .boutique-three-col__cell--wide {
+    order: 2;
+    width: 100%;
+  }
+
+  .split-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .split-section .split {
+    width: 100%;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+
+    
+    
+  }
+
+  /* 🔥 THIS IS KEY FIX */
+  .split-section .split.right {
+    margin-top: 0 !important;
+  }
+
+}
     
   `,
         }}

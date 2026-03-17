@@ -5,6 +5,7 @@ import "./globals.css";
 import ConditionalFooter from "@/components/ConditionalFooter";
 import LayoutNavigation from "@/components/LayoutNavigation";
 
+
 const syne = Syne({
   variable: "--font-heading",
   subsets: ["latin"],
@@ -18,6 +19,9 @@ const workSans = Work_Sans({
 export const metadata: Metadata = {
   title: "Elk Audios",
   description: "Elk Audios",
+  icons: {
+    icon: "/assets/favicon%20Logo%20White%20(1).png",
+  },
 };
 
 export const viewport: Viewport = {

@@ -323,6 +323,90 @@
     flex: 1;
   }
 
+  /* Mobile responsiveness for boutique architectural page */
+  @media (max-width: 767px) {
+    .boutique-split-heading {
+      right: 1rem;
+      max-width: calc(100vw - 2rem);
+      font-size: clamp(2.5rem, 12vw, 4.25rem);
+      line-height: 0.95;
+    }
+
+    .boutique-split-heading span:nth-child(1),
+    .boutique-split-heading span:nth-child(2),
+    .boutique-split-heading span:nth-child(3) {
+      max-width: 100%;
+    }
+
+    .parallax-gallery-row {
+      gap: 16px;
+      align-items: stretch;
+      margin-top: clamp(7rem, 22vh, 12rem);
+      flex: 0 0 auto;
+    }
+
+    .parallax-window {
+      height: 42vh !important;
+    }
+
+    .parallax-img {
+      height: 180%;
+    }
+
+    .boutique-three-col {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1.25rem;
+      gap: 1.25rem;
+    }
+
+    /* Mobile: keep agency copy first, place split-section below */
+    .boutique-three-col__cell--content {
+      order: 1;
+    }
+
+    .boutique-three-col__cell--wide {
+      order: 2;
+      width: 100%;
+    }
+
+    .boutique-agency-block {
+      padding-top: 2.25rem;
+      padding-right: 0;
+      align-items: center;
+      text-align: center;
+      max-width: 36rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .split-section {
+      padding-left: 0;
+      padding-bottom: 24px;
+      /* Preserve desktop layout: 2 halves side-by-side */
+      flex-direction: row;
+      gap: 1px;
+      align-items: flex-start;
+    }
+
+    .split-section .split {
+      width: 50%;
+      height: 400px !important;
+      /* Preserve desktop "split panorama" crop */
+      background-size: 200% 130% !important;
+    }
+
+    .split-section .split.left {
+      background-position: left center;
+    }
+
+    .split-section .split.right {
+      /* Keep a constant stagger on phones */
+      margin-top: 80px;
+      background-position: right center;
+    }
+  }
+
   @media (min-width: 768px) {
     .parallax-gallery {
       padding-left: 1.5rem;
@@ -383,15 +467,7 @@
   }
 
   /* Three equal columns below parallax gallery, nav to nav, no visible partition */
-  .boutique-three-col {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    width: 100%;
-    background: #0c1136;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 2rem;
-  }
+  
 
   @media (min-width: 768px) {
     .boutique-three-col {
@@ -416,6 +492,10 @@
     align-items: flex-start;
   }
 
+  .boutique-agency-block{
+    padding: 0 !important;
+  }
+
   /* Split section: one image in two halves, right shifted down */
   .split-section {
     display: flex;
@@ -423,7 +503,7 @@
     gap: 1px;
     width: 100%;
     padding-bottom: 80px;
-    padding-left: 25px;
+    margin: 10px;
   }
 
   .split-section .split {
@@ -497,4 +577,282 @@
     text-decoration: underline;
     color: rgba(255, 255, 255, 0.9);
   }
+
+  /* Team section - horizontal scroller */
+  .team-section {
+    position: relative;
+    padding: 1rem 0.5vw 1rem;
+    background: #000000;
+    border-top: 1px solid rgba(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+  .team-text {
+    position: absolute;
+    inset-block: 0;
+    left: 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 0; /* sit underneath scroll cards */
+    pointer-events: none;
+  }
+
+  .team-text h2 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: var(--font-heading), system-ui, -apple-system, BlinkMacSystemFont,
+      "SF Pro Text", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 0.9;
+  }
+
+  .team-text .italic {
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 0.35rem;
+  }
+
+  .team-text a {
+    align-self: flex-start;
+    position: relative;
+    font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
+      "SF Pro Text", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(248, 250, 252, 0.7);
+    white-space: nowrap;
+    padding-bottom: 0.35rem;
+  }
+
+  .team-text a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(248, 250, 252, 0.5);
+    transform-origin: left;
+    transform: scaleX(0.5);
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+
+  .team-text a:hover {
+    color: #fbbf24;
+  }
+
+  .team-text a:hover::after {
+    background: #fbbf24;
+    transform: scaleX(1);
+  }
+
+  .team-scroll {
+    position: relative;
+    z-index: 1; /* above text + link */
+    display: flex;
+    gap: 2.5rem;
+    overflow-x: auto;
+    padding-left: calc(6vw + 260px);
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .team-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .team-card {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    background: #f9fafb;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 22px 60px rgba(0,0,0);
+  }
+
+  .team-card.spacer {
+    opacity: 0;
+  }
+
+  .team-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .team-card.spacer {
+      display: none;
+    }
+    .team-section {
+      padding: 3.25rem 1.5rem 3.75rem;
+    }
+
+    .team-text {
+      position: static;
+      padding-bottom: 1.5rem;
+      pointer-events: auto;
+    }
+
+    .team-scroll {
+      padding-left: 0;
+      margin-right: -1.5rem;
+    }
+
+    .team-card {
+      flex-basis: 260px;
+    }
+  }
+
+
+
 }
+
+/* ================= FINAL INFO SECTION  OF COMMERCIAL PAVA AV================= */
+
+.studio-info{
+  padding:80px 6vw;
+  width:100%;
+  }
+  
+  .studio-info-inner{
+  border:1px dashed rgba(255,255,255,.35);
+  border-radius:16px;
+  
+  padding:80px 60px;
+  
+  width:100%;
+  max-width:1400px;
+  
+  margin:auto;
+  }
+  
+  /* GRID */
+  
+  .studio-info-grid{
+  display:grid;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  grid-template-columns:1fr 1fr;
+  gap:60px 40px;
+  
+  width:100%;
+  }
+  .studio-info-grid h3 span{
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  /* BLOCK */
+  
+  .info-block{
+  width:100%;
+  min-width:0;
+  }
+  
+  /* LABEL */
+  
+  .info-block span{
+  display:block;
+  
+  font-size:12px;
+  letter-spacing:.35em;
+  
+  opacity:.8;
+  
+  margin-bottom:8px;
+  }
+  
+  /* BIG TEXT */
+  
+  .info-block h1{
+  margin:0;
+  
+  font-weight:900;
+  
+  font-size:clamp(40px,5vw,95px);
+  
+  line-height:.95;
+  
+  letter-spacing:-0.02em;
+  
+  word-break:break-word;
+  }
+  
+  /* SERVICES ROW */
+  
+  .info-block.full{
+  grid-column:1 / -1;
+  }
+  
+  /* ================= TABLET ================= */
+  
+  @media(max-width:1024px){
+  
+  .studio-info-inner{
+  padding:70px 40px;
+  }
+  
+  .studio-info-grid{
+  gap:50px 30px;
+  }
+  
+  .info-block h1{
+  font-size:clamp(36px,6vw,70px);
+  }
+  
+  }
+  
+  /* ================= MOBILE ================= */
+  
+  @media(max-width:768px){
+    .studio-info-grid h3 span{
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .studio-info-grid h3{
+      font-size: 0.8rem;
+      
+    }
+  
+  .studio-info-inner{
+  padding:50px 25px;
+  }
+  
+  .studio-info-grid{
+  grid-template-columns:1fr;
+  gap:40px;
+  }
+  
+  .info-block.full{
+  grid-column:auto;
+  }
+  
+  .info-block span{
+  font-size:11px;
+  letter-spacing:.25em;
+  }
+  
+  .info-block h1{
+  font-size:clamp(30px,9vw,52px);
+  line-height:1;
+  }
+  
+  }

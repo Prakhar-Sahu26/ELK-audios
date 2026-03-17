@@ -4,6 +4,12 @@ import { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 
+declare global {
+  interface Window {
+    Razorpay?: any;
+  }
+}
+
 interface FormData {
   name: string;
   email: string;
@@ -13,6 +19,7 @@ interface FormData {
 
 export default function ContactPage() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
 
@@ -20,10 +27,112 @@ export default function ContactPage() {
     setIsVisible(true);
   }, []);
 
+  useEffect(() => {
+    // Load Razorpay script once on mount
+    if (typeof window === "undefined") return;
+    if (window.Razorpay) return;
+
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const onSubmit = async (data: FormData) => {
-    console.log(data);
-    // Handle form submission here
-    reset();
+    try {
+      setIsSubmitting(true);
+
+      // 1. Create Razorpay order via API route
+      const orderRes = await fetch("/api/razorpay/order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          amount: 999, // consultation amount in INR
+          currency: "INR",
+          notes: {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            message: data.message,
+          },
+        }),
+      });
+
+      if (!orderRes.ok) {
+        console.error("Failed to create Razorpay order");
+        setIsSubmitting(false);
+        return;
+      }
+
+      const { orderId, amount, currency } = await orderRes.json();
+
+      if (typeof window === "undefined" || !window.Razorpay) {
+        console.error("Razorpay SDK not loaded");
+        setIsSubmitting(false);
+        return;
+      }
+
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+        amount,
+        currency,
+        name: "ELK Audios",
+        description: "Consultation Booking",
+        order_id: orderId,
+        prefill: {
+          name: data.name,
+          email: data.email,
+          contact: data.phone,
+        },
+        notes: {
+          message: data.message,
+        },
+        handler: async function (response: any) {
+          try {
+            // 2. On successful payment, send booking + payment details to Google Sheet
+            await fetch("/api/booking/google-sheet", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                ...data,
+                paymentId: response.razorpay_payment_id,
+                orderId: response.razorpay_order_id,
+                amount: amount / 100,
+                currency,
+                status: "PAID",
+              }),
+            });
+            reset();
+          } catch (err) {
+            console.error("Failed to save booking to Google Sheet", err);
+          } finally {
+            setIsSubmitting(false);
+          }
+        },
+        modal: {
+          ondismiss: () => {
+            setIsSubmitting(false);
+          },
+        },
+        theme: {
+          color: "#fbbf24",
+        },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    } catch (error) {
+      console.error("Error during consultation booking", error);
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -192,10 +301,11 @@ export default function ContactPage() {
 
                     <button
                       type="submit"
-                      className="w-full group relative overflow-hidden border-2 border-amber-500/30 bg-amber-500/10 backdrop-blur-sm text-white px-10 py-5 text-base md:text-lg font-body font-medium rounded-full hover:border-amber-400/40 hover:bg-amber-500/15 transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] mt-2"
+                      disabled={isSubmitting}
+                      className="w-full group relative overflow-hidden border-2 border-amber-500/30 bg-amber-500/10 backdrop-blur-sm text-white px-10 py-5 text-base md:text-lg font-body font-medium rounded-full hover:border-amber-400/40 hover:bg-amber-500/15 transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                       <span className="relative z-10 flex items-center justify-center gap-2">
-                        Submit Inquiry
+                        {isSubmitting ? "Processing..." : "Book Consultation"}
                         <svg
                           className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                           fill="none"

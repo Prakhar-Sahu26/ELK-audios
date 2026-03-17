@@ -217,8 +217,8 @@ export default function BoutiqueArchitecturalPage() {
     }
 
     .boutique-three-col {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    align-items:center;
+    text-align: center;
     width: 100%;
     background: #0c1136;
     padding-left: 1rem;

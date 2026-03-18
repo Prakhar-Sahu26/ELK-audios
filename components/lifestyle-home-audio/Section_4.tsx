@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function Section_3() {
+export default function Section_4() {
   return (
     <div className="w-full h-[40%]">
 

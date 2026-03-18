@@ -459,38 +459,46 @@ height:320px;
 
             </section>
 
-            <section className="team-section">
+            <section className="custom-flex-grid">
 
-                <div className="team-scroller display-flex">
+  {/* TOP ROW */}
+  <div className="row top-row">
 
-                <div className="team-text">
-                    <h3 className="text-2xl font-bold flex items-center gap-2 ">
-                        The 
-                    </h3>
-                    <h2>TEAM</h2>
-                </div>
+    <div className="box main-content">
+      <img src={IMG4} />
+    </div>
 
+    <div className="box sidebar">
+      <div className="services-inner">
+        <p>SERVICES</p>
+        <h3>
+          SOUND DESIGN<br />
+          MUSIC COMPOSITION<br />
+          VOICE OVER CASTING<br />
+          MUSIC SEARCHES<br />
+          LICENSING + SUPERVISION<br />
+          VO RECORDING + ADR
+        </h3>
+      </div>
+    </div>
 
-                <div className="team-scroll">
+  </div>
 
-                    {/* spacer card */}
-                    <div className="team-card spacer" />
+  {/* BOTTOM ROW */}
+  <div className="row bottom-row">
 
-                    {team.map((member, i) => (
-                        <div key={i} className="team-card">
+    <div className="box twin">
+      <img src={IMG6} />
+    </div>
 
-                            <img src={member.img} />
+    <div className="box twin">
+      <img src={IMG5} />
+    </div>
 
-                            <h3>{member.name}</h3>
-                            <p>{member.role}</p>
+  </div>
 
-                        </div>
-                    ))}
+</section>
 
-                    </div>
-                </div>
-
-            </section>
             <section className="studio-info">
 
   <div className="studio-info-inner">

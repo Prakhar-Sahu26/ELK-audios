@@ -261,7 +261,7 @@ letter-spacing:.3em;
 }
 
 }
-/* ================= SECOND SECTION ================= */
+/* ================= SECOND SECTION 2nd grid================= */
 
 .studio-services-section{
 padding:80px 6vw 140px;
@@ -347,11 +347,60 @@ grid-template-rows:auto;
 grid-row:auto;
 height:320px;
 }
+@media(max-width:1000px){
 
+.studio-services-grid{
+  grid-template-columns:1fr 1fr;  /* only 2 columns */
+  grid-template-rows:auto auto auto;
+  gap:12px;
+}
 
+/* LEFT TALL stays spanning */
+.tall{
+  grid-row:span 2;
+  height:100%;
+}
 
+/* SERVICES stays top-right */
+.services{
+  grid-column:2;
+  grid-row:1;
+}
 
+/* SMALL IMAGE below services */
+.studio-services-grid .card:not(.tall):not(.big):not(.services){
+  grid-column:2;
+  grid-row:2;
+}
 
+/* BIG IMAGE moves below everything */
+.big{
+  grid-column:1 / -1;  /* full width */
+  grid-row:3;
+  height:260px;
+}
+
+/* adjust heights */
+
+.studio-services-grid{
+  grid-auto-rows:160px;
+}
+
+.services{
+  padding:20px;
+}
+
+.services h3{
+  font-size:9px;
+  line-height:1.4;
+}
+
+.services-small{
+  font-size:10px;
+  letter-spacing:.25em;
+}
+
+}
 
 }
 
@@ -488,7 +537,7 @@ height:320px;
   <div className="row bottom-row">
 
     <div className="box twin">
-      <img src={IMG6} />
+      <img src={IMG5} />
     </div>
 
     <div className="box twin">

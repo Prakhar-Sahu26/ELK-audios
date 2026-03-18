@@ -13,30 +13,41 @@ export async function GET() {
 
     const sheets = google.sheets({ version: "v4", auth });
 
+    const row = [
+      new Date().toLocaleString(),
+      "Test User",
+      "test@gmail.com",
+      "9999999999",
+      "Test Company",
+      "Tomorrow 5PM",
+      "Testing Needs",
+      "This is a test message",
+      "pay_test_123",
+      "order_test_123",
+      999,
+      "PAID",
+    ];
+
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "Sheet1!A:H",
+      range: "Razorpay!A:L",
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [[
-          new Date().toLocaleString(),
-          "Test User",
-          "test@email.com",
-          "9999999999",
-          "Test Company",
-          "Tomorrow",
-          "Testing Needs",
-          "This is a test message"
-        ]],
+        values: [row],
       },
     });
 
-    return NextResponse.json({ success: true, message: "Data added!" });
+    return NextResponse.json({
+      success: true,
+      message: "✅ Data added to Razorpay sheet!",
+    });
 
-} catch (err) {
+  } catch (err) {
     console.error(err);
-    return NextResponse.json(
-      { success: false, error: err.message },
-      { status: 500 }
-    );
-  }}
+
+    return NextResponse.json({
+      success: false,
+      error: err.message,
+    });
+  }
+}

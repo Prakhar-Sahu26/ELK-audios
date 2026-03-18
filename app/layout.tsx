@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${syne.variable} ${workSans.variable} relative`}>
-        <LayoutNavigation />
+        <LayoutNavigation/>
         {children}
         <ConditionalFooter />
       </body>

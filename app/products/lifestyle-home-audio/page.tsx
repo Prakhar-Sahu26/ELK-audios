@@ -13,7 +13,7 @@ export default function Page() {
         <BruegelSecondLayoutSection />
         <BruegelThreeCardSection />
         {/* next sections */}
-        <section className="studio-info bg-black">
+        <section className="studio-info bg-[#0f172a]">
 
             <div className="studio-info-inner">
 

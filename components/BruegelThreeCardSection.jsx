@@ -8,7 +8,7 @@ export default function BruegelThreeCardSection() {
 
       {/* 🔥 BACKGROUND IMAGE */}
       <Image
-        src="/assets/lottie/bg-cardCover.png"
+        src="/assets/lottie/3.jpeg"
         alt="Background"
         fill
         className="object-cover"

@@ -8,7 +8,7 @@ export default function BruegelSecondLayoutSection() {
 
       {/* 🔥 BACKGROUND */}
       <Image
-        src="/assets/lottie/bg-cardCover.png" // use a DIFFERENT image
+        src="/assets/lottie/6.jpeg" // use a DIFFERENT image
         alt="Background"
         fill
         className="object-cover"

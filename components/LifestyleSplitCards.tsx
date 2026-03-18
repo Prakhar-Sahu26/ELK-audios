@@ -1,14 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+import { lifestyleCards } from "@/data/lifestyleCards";
 
 export default function LifestyleSplitCards() {
+  const [hovered, setHovered] = useState<string | null>(null);
+
+  const main = lifestyleCards[0];
+  const who = lifestyleCards[1];
+  const lifestyle = lifestyleCards[2];
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
 
       {/* 🔥 BACKGROUND */}
       <Image
-        src="/assets/lottie/bg-cardCover.png"
+        src="/assets/lottie/0.png"
         alt="Background"
         fill
         className="object-cover"
@@ -24,38 +32,101 @@ export default function LifestyleSplitCards() {
         {/* EMPTY */}
         <div className="col-span-2" />
 
-        {/* GREEN */}
+        {/* GREEN (MAIN CARD) */}
         <a
-          href="#"
+          href={main.link}
+          onMouseEnter={() => setHovered(main.id)}
+          onMouseLeave={() => setHovered(null)}
           className="col-span-2 bg-[#2f4f3f]/80 backdrop-blur-md 
-                     text-white flex items-center justify-center text-center px-6"
+                     text-white flex items-center justify-center text-center px-6 relative overflow-hidden"
         >
-          Premium lifestyle audio systems designed to transform your living space.
+          {/* MEDIA */}
+          {main.video && hovered === main.id ? (
+            <video
+              src={main.video}
+              autoPlay
+              muted
+              loop
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <Image
+              src={main.image}
+              alt={main.title}
+              fill
+              className="object-cover"
+            />
+          )}
+
+          {/* OVERLAY */}
+          <div className="absolute inset-0 bg-black/40" />
+
+          {/* TEXT */}
+          <p className="relative z-10">{main.title}</p>
         </a>
 
         {/* WHITE */}
         <a
-          href="#"
+          href={who.link}
+          onMouseEnter={() => setHovered(who.id)}
+          onMouseLeave={() => setHovered(null)}
           className="bg-[#e5e1d8]/90 backdrop-blur-md text-black 
-                     flex items-center justify-center"
+                     flex items-center justify-center relative overflow-hidden"
         >
-          Who is
+          {who.video && hovered === who.id ? (
+            <video
+              src={who.video}
+              autoPlay
+              muted
+              loop
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <Image
+              src={who.image}
+              alt={who.title}
+              fill
+              className="object-cover"
+            />
+          )}
+
+          <div className="absolute inset-0 bg-black/20" />
+          <p className="relative z-10 font-medium">{who.title}</p>
         </a>
 
         {/* BEIGE */}
         <a
-          href="#"
+          href={lifestyle.link}
+          onMouseEnter={() => setHovered(lifestyle.id)}
+          onMouseLeave={() => setHovered(null)}
           className="bg-[#c8b8a6]/90 backdrop-blur-md text-black 
-                     flex items-center justify-center"
+                     flex items-center justify-center relative overflow-hidden"
         >
-          Lifestyle Audio
+          {lifestyle.video && hovered === lifestyle.id ? (
+            <video
+              src={lifestyle.video}
+              autoPlay
+              muted
+              loop
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <Image
+              src={lifestyle.image}
+              alt={lifestyle.title}
+              fill
+              className="object-cover"
+            />
+          )}
+
+          <div className="absolute inset-0 bg-black/20" />
+          <p className="relative z-10 font-medium">{lifestyle.title}</p>
         </a>
 
         {/* EMPTY */}
         <div className="col-span-2" />
 
       </div>
-
     </section>
   );
-}
+} 

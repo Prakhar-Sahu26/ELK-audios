@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { lifestyleCards } from "@/data/lifestyleCards";
 
-export default function LifestyleSplitCards() {
+export default function Section_1() {
   const [hovered, setHovered] = useState<string | null>(null);
 
   const main = lifestyleCards[0];

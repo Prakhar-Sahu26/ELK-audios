@@ -1,19 +1,19 @@
-import HeroExhibition from "@/components/HeroExhibition";
-import LifestyleSplitCards from "@/components/LifestyleSplitCards";
-import BruegelStyleSection from "@/components/BruegelStyleSection"
-import BruegelSecondLayoutSection from "@/components/BruegelSecondLayoutSection";
-import BruegelThreeCardSection from "@/components/BruegelThreeCardSection"
+import HeroExhibition from "@/components/lifestyle-home-audio/HeroExhibition";
+import Section_1 from "@/components/lifestyle-home-audio/Section_1";
+import Section_2 from "@/components/lifestyle-home-audio/Section_2";
+import Section_3 from "@/components/lifestyle-home-audio/Section_3";
+import Section_4 from "@/components/lifestyle-home-audio/Section_4";
+import Section_5 from "@/components/lifestyle-home-audio/Section_5";
 
 export default function Page() {
     return <>
         <HeroExhibition />
-
-        {/* 👇 ADD HERE */}
-        <BruegelStyleSection />
-        <BruegelSecondLayoutSection />
-        <BruegelThreeCardSection />
-        {/* next sections */}
-        <section className="studio-info bg-[#0f172a]">
+        <Section_1/>
+        <Section_2/>
+        <Section_3/>
+        <Section_4/>
+        <Section_5/>
+        <section className="Section_5 studio-info bg-[#0f172a]">
 
             <div className="studio-info-inner">
 

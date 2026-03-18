@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function BruegelStyleSection() {
+export default function Section_2() {
   return (
     <section className="relative w-full overflow-hidden md:h-screen">
 

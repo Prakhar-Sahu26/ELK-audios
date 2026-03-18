@@ -1,5 +1,5 @@
 "use client";
-import LifestyleSplitCards from "@/components/LifestyleSplitCards";
+import LifestyleSplitCards from "@/components/lifestyle-home-audio/Section_1";
 
 export default function Page() {
   return (
@@ -56,10 +56,6 @@ export default function Page() {
             " />
 
           </div>
-
-          {/* 🔥 CARDS */}
-          <LifestyleSplitCards />
-
         </div>
       </section>
     </main>

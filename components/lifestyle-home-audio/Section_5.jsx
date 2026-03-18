@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function BruegelThreeCardSection() {
+export default function Section_5() {
   return (
     <section className="relative w-full h-screen overflow-hidden">
 

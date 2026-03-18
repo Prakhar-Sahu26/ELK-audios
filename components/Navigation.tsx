@@ -127,12 +127,6 @@ export default function Navigation({
                 >
                   Commercial PAVA & AV
                 </Link>
-                <Link
-                  href="/build-your-own"
-                  className="block px-4 py-2.5 text-sm text-text hover:bg-gray-50 transition-colors"
-                >
-                  Build Your Own
-                </Link>
               </div>
             </div>
           )}

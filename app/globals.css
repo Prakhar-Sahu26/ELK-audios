@@ -515,7 +515,7 @@ body {
   .split-section .split {
     width: 50%;
     background-repeat: no-repeat;
-    background-size: 200% auto;
+    background-size: 200% 150%;
     height: 90vh;
     margin-bottom: 17vh;
   }

@@ -4,6 +4,7 @@ import "lenis/dist/lenis.css";
 import "./globals.css";
 import ConditionalFooter from "@/components/ConditionalFooter";
 import LayoutNavigation from "@/components/LayoutNavigation";
+import Head from "next/head";
 
 const syne = Syne({
   variable: "--font-heading",
@@ -18,26 +19,20 @@ const workSans = Work_Sans({
 export const metadata: Metadata = {
   title: "Elk Audios",
   description: "Elk Audios",
-
-  icons: {
-    icon: "/assets/favicon_Logo_White.png",
-  },
-
   openGraph: {
     title: "Elk Audios",
     description: "Elk Audios",
-    url: "https://elk-audios-nine.vercel.app/", 
+    url: "https://elk-audios-nine.vercel.app/",
     siteName: "Elk Audios",
     images: [
       {
-        url: "https://elk-audios-nine.vercel.app/assets/Logo.png", 
+        url: "https://elk-audios-nine.vercel.app/assets/Logo.png",
         width: 1200,
         height: 630,
       },
     ],
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Elk Audios",
@@ -52,13 +47,19 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <Head>
+        {/* Standard favicon */}
+        <link rel="icon" href="/assets/favicon_Logo_White.png" />
+        {/* Optional: smaller icons for older browsers */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_Logo_White.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_Logo_White.png" />
+        {/* Optional: Apple Touch Icon */}
+        <link rel="apple-touch-icon" href="/assets/favicon_Logo_White.png" />
+      </Head>
+
       <body className={`${syne.variable} ${workSans.variable} relative`}>
         <LayoutNavigation />
         {children}

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Elk Audios",
     images: [
       {
-        url: "https://elk-audios-nine.vercel.app/Logo_PNG_Withou_brand_line.svg", // 🔥 MUST be absolute
+        url: "https://elk-audios-nine.vercel.app/Logo_PNG_Withou_brand_line.png", // 🔥 MUST be absolute
         width: 1200,
         height: 630,
       },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Elk Audios",
     description: "Elk Audios",
-    images: ["https://elk-audios-nine.vercel.app/Logo_PNG_Withou_brand_line.svg"],
+    images: ["https://elk-audios-nine.vercel.app/Logo_PNG_Withou_brand_line.png"],
   },
 };
 

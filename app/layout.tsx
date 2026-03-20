@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Elk Audios",
     description: "Elk Audios",
-    images: ["https://your-domain.vercel.app/preview.jpg"],
+    images: ["https://elk-audios-nine.vercel.app/Logo_PNG_Withou_brand_line.svg"],
   },
 };
 

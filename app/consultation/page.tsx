@@ -225,7 +225,7 @@ export default function ConsultationPage() {
       <section id="consultation-form" className="relative z-10 py-14 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <div className="relative bg-gradient-to-br from-slate-900/70 via-slate-800/50 to-slate-900/70 backdrop-blur-xl rounded-2xl border border-amber-500/20 shadow-2xl shadow-amber-500/5 overflow-hidden">
+            <div className="relative  from-slate-900/70 via-slate-800/50 to-slate-900/70 backdrop-blur-xl rounded-2xl border border-amber-500/20 shadow-2xl shadow-amber-500/5 overflow-hidden">
               <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 left-0 w-40 h-40 bg-amber-400/5 rounded-full blur-3xl" />
@@ -327,11 +327,12 @@ export default function ConsultationPage() {
 
                   <div>
                     <label htmlFor="preferredDateTime" className="block text-sm text-gray-300 mb-2 font-medium tracking-wide">
-                      Preferred Date &amp; Time
+                      Preferred Date & Time
                     </label>
                     <input
                       id="preferredDateTime"
                       type="datetime-local"
+                      onFocus={(e) => e.currentTarget.showPicker?.()}
                       className="w-full px-5 py-4 bg-black/25 backdrop-blur-sm border border-amber-500/15 rounded-xl text-white placeholder-gray-500 outline-none focus:ring-1 focus:ring-amber-400/40 focus:border-amber-400/30 transition-all duration-300 hover:border-amber-500/20 focus:bg-black/35"
                       {...register("preferredDateTime")}
                     />

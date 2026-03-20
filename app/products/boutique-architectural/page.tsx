@@ -220,10 +220,9 @@ export default function BoutiqueArchitecturalPage() {
     align-items:center;
     text-align: center;
     width: 100%;
-    background: #0c1136;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 2rem;
+    padding-top: 13vh;
   }
 
     /* Zone image - right side with mask, overlays images */
@@ -330,10 +329,11 @@ export default function BoutiqueArchitecturalPage() {
       white-space: nowrap;
       will-change: transform;
       font-family: var(--font-heading), sans-serif;
-      line-height: 1;
+      line-height: 1.2;
       margin: 0;
       padding: 0;
       display: block;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     }
 
     /* Solid text - plain area */
@@ -539,6 +539,7 @@ export default function BoutiqueArchitecturalPage() {
     
     
   }
+  
 
   /* 🔥 THIS IS KEY FIX */
   .split-section .split.right {

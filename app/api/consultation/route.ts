@@ -15,6 +15,10 @@ const consultationSchema = z.object({
   paymentId: z.string().optional(),
   orderId: z.string().optional(),
   amount: z.number().optional(),
+  currency: z.string().optional(),
+  paymentMethod: z.string().optional(),
+  receipt: z.string().optional(),
+  signature: z.string().optional(),
   status: z.string().optional(),
 });
 
@@ -81,6 +85,10 @@ export async function POST(req: NextRequest) {
       paymentId,
       orderId,
       amount,
+      currency,
+      paymentMethod,
+      receipt,
+      signature,
       status,
     } = parsed.data;
 
@@ -115,12 +123,16 @@ export async function POST(req: NextRequest) {
       paymentId || "",
       orderId || "",
       amount || "",
+      currency || "",
+      paymentMethod || "",
+      receipt || "",
+      signature || "",
       status || "PENDING",
     ];
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: sheetId,
-      range: "Razorpay!A:L", // ✅ your sheet
+      range: "Razorpay!A:P",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [row],
@@ -129,16 +141,18 @@ export async function POST(req: NextRequest) {
 
     // ================= EMAIL =================
 
-    const adminEmail = process.env.ADMIN_EMAIL!;
-    const apiKey = process.env.EMAIL_API_KEY!;
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const apiKey = process.env.EMAIL_API_KEY;
 
-    // ADMIN EMAIL
-    await sendResendEmail({
-      apiKey,
-      from: adminEmail,
-      to: adminEmail,
-      subject: "New Consultation Request",
-      text: `
+    // Skip emails in test/local setups where mail envs are not configured.
+    if (adminEmail && apiKey) {
+      // ADMIN EMAIL
+      await sendResendEmail({
+        apiKey,
+        from: adminEmail,
+        to: adminEmail,
+        subject: "New Consultation Request",
+        text: `
 New Consultation Request
 
 Name: ${fullName}
@@ -153,16 +167,20 @@ Status: ${status || "PENDING"}
 PaymentId: ${paymentId || "-"}
 OrderId: ${orderId || "-"}
 Amount: ${amount || "-"}
+Currency: ${currency || "-"}
+Payment Method: ${paymentMethod || "-"}
+Receipt: ${receipt || "-"}
+Signature: ${signature || "-"}
       `,
-    });
+      });
 
-    // USER EMAIL
-    await sendResendEmail({
-      apiKey,
-      from: adminEmail,
-      to: email,
-      subject: "We received your request",
-      text: `
+      // USER EMAIL
+      await sendResendEmail({
+        apiKey,
+        from: adminEmail,
+        to: email,
+        subject: "We received your request",
+        text: `
 Hi ${fullName},
 
 Thanks for contacting ELK Audios.
@@ -173,7 +191,8 @@ Our team will get back to you shortly.
 Best regards,
 ELK Audios
       `,
-    });
+      });
+    }
 
     return NextResponse.json({ success: true });
 

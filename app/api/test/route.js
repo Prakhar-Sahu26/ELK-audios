@@ -1,45 +1,38 @@
-import { google } from "googleapis";
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(req) {
   try {
-    const auth = new google.auth.GoogleAuth({
-      credentials: {
-        client_email: process.env.GOOGLE_CLIENT_EMAIL,
-        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
-      },
-      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+    const testPayload = {
+      fullName: "Test User (No Razorpay)",
+      email: "test@example.com",
+      phone: "9999999999",
+      company: "Internal QA",
+      preferredDateTime: "Tomorrow 5 PM",
+      needs: "Google Sheets connectivity test",
+      message: "This test entry is submitted from /api/test without Razorpay.",
+      status: "TEST_NO_PAYMENT",
+      paymentId: "",
+      orderId: "",
+      amount: 0,
+      currency: "",
+      paymentMethod: "",
+      receipt: "",
+      signature: "",
+    };
+
+    const res = await fetch(`${req.nextUrl.origin}/api/consultation`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(testPayload),
     });
-
-    const sheets = google.sheets({ version: "v4", auth });
-
-    const row = [
-      new Date().toLocaleString(),
-      "Test User",
-      "test@gmail.com",
-      "9999999999",
-      "Test Company",
-      "Tomorrow 5PM",
-      "Testing Needs",
-      "This is a test message",
-      "pay_test_123",
-      "order_test_123",
-      999,
-      "PAID",
-    ];
-
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "Razorpay!A:L",
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [row],
-      },
-    });
+    const body = await res.json().catch(() => null);
 
     return NextResponse.json({
-      success: true,
-      message: "✅ Data added to Razorpay sheet!",
+      success: res.ok,
+      message: res.ok
+        ? "Consultation test posted successfully. Google Sheets is connected."
+        : "Consultation test failed.",
+      consultationResponse: body,
     });
 
   } catch (err) {
@@ -47,7 +40,7 @@ export async function GET() {
 
     return NextResponse.json({
       success: false,
-      error: err.message,
+      error: err instanceof Error ? err.message : "Unknown error",
     });
   }
 }

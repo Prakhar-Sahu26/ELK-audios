@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Category() {
   const categories = [
@@ -49,9 +50,9 @@ export default function Category() {
           <div className="absolute inset-0 bg-black/40 z-10" />
           <div className="relative z-20 text-white text-center px-4">
             <div className="inline-block relative md:inline-flex md:items-center md:justify-center md:gap-2">
-              <a href={category.link}>
+              <Link href={category.link}>
                 <h2 className="text-4xl font-bold">{category.title}</h2>
-              </a>
+              </Link>
 
               {/* Desktop arrow - inline with heading */}
               <span className="hidden md:inline-flex items-center justify-center translate-y-[0.1875rem]">

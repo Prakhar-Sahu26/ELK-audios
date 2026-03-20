@@ -1,43 +1,5 @@
 "use client";
 
-const team = [
-    {
-        name: "Andrew Lancaster",
-        role: "Founder & Composer",
-        img: "https://cdn.prod.website-files.com/64edd229801d8ebadf19ed58/65a669a8462a7cdcb75fb07c_thumbnail.webp"
-    },
-    {
-        name: "Andrew Lancaster",
-        role: "Founder & Composer",
-        img: "https://cdn.prod.website-files.com/64edd229801d8ebadf19ed58/65a669a8462a7cdcb75fb07c_thumbnail.webp"
-    },
-    {
-        name: "Andrew Lancaster",
-        role: "Founder & Composer",
-        img: "https://cdn.prod.website-files.com/64edd229801d8ebadf19ed58/65a669a8462a7cdcb75fb07c_thumbnail.webp"
-    },
-    {
-        name: "Andrew Lancaster",
-        role: "Founder & Composer",
-        img: "https://cdn.prod.website-files.com/64edd229801d8ebadf19ed58/65a669a8462a7cdcb75fb07c_thumbnail.webp"
-    },
-    {
-        name: "Jono Ma",
-        role: "Founder & Composer",
-        img: "https://cdn.prod.website-files.com/64edd229801d8ebadf19ed58/6944dbe65e0baacd1d7a2db7_Jono%20-%20Resized.webp"
-    },
-    {
-        name: "Matteo Zingales",
-        role: "Founder & Composer",
-        img: "https://cdn.prod.website-files.com/64edd229801d8ebadf19ed58/6604b52deaa3185d69b9622b_thumbnail.webp"
-    },
-    {
-        name: "Felix Partos",
-        role: "Studio Assistant",
-        img: "https://cdn.prod.website-files.com/64edd229801d8ebadf19ed58/69439e54b7d2ecab1614c252_FELIX.webp"
-    }
-]
-
 const HERO =
     "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=2000&q=90";
 

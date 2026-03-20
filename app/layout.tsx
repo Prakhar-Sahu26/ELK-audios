@@ -20,17 +20,17 @@ export const metadata: Metadata = {
   description: "Elk Audios",
 
   icons: {
-    icon: "/assets/favicon Logo White (1).png", // ✅ renamed for safety
+    icon: "/assets/favicon_Logo_White.png",
   },
 
   openGraph: {
     title: "Elk Audios",
     description: "Elk Audios",
-    url: "https://elk-audios-nine.vercel.app/", // 🔥 CHANGE THIS
+    url: "https://elk-audios-nine.vercel.app/", 
     siteName: "Elk Audios",
     images: [
       {
-        url: "https://elk-audios-nine.vercel.app/assets/Logo.png", // 🔥 MUST be absolute
+        url: "https://elk-audios-nine.vercel.app/assets/Logo.png", 
         width: 1200,
         height: 630,
       },

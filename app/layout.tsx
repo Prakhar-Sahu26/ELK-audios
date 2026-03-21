@@ -5,7 +5,6 @@ import "./globals.css";
 import ConditionalFooter from "@/components/ConditionalFooter";
 import LayoutNavigation from "@/components/LayoutNavigation";
 
-
 const syne = Syne({
   variable: "--font-heading",
   subsets: ["latin"],
@@ -19,8 +18,31 @@ const workSans = Work_Sans({
 export const metadata: Metadata = {
   title: "Elk Audios",
   description: "Elk Audios",
+
   icons: {
-    icon: "/assets/favicon%20Logo%20White%20(1).png",
+    icon: "/assets/favicon_Logo_White.png",
+  },
+
+  openGraph: {
+    title: "Elk Audios",
+    description: "Elk Audios",
+    url: "https://elk-audios-nine.vercel.app/", 
+    siteName: "Elk Audios",
+    images: [
+      {
+        url: "https://elk-audios-nine.vercel.app/assets/Logo.png", 
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Elk Audios",
+    description: "Elk Audios",
+    images: ["https://elk-audios-nine.vercel.app/assets/Logo.png"],
   },
 };
 
@@ -38,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${syne.variable} ${workSans.variable} relative`}>
-        <LayoutNavigation/>
+        <LayoutNavigation />
         {children}
         <ConditionalFooter />
       </body>

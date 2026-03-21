@@ -1,0 +1,322 @@
+/* ================= DESKTOP (UNCHANGED) ================= */
+
+.galleryRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 56px;
+  height: 100vh;
+  padding: 0 1rem;
+}
+
+.parallaxWindow {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #222;
+  min-width: 0;
+}
+
+/* stagger heights */
+.parallaxWindow[data-index="0"] {
+  height: calc(100vh - 5rem - 400px);
+}
+
+.parallaxWindow[data-index="1"] {
+  height: calc(100vh - 5rem - 240px);
+}
+
+.parallaxWindow[data-index="2"] {
+  height: calc(100vh - 5rem - 80px);
+}
+
+.parallaxImg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+/* CONNECTED IMAGE */
+.parallaxWindow:nth-child(1) img {
+  object-position: 0% 75%;
+}
+
+.parallaxWindow:nth-child(2) img {
+  object-position: 50% 75%;
+}
+
+.parallaxWindow:nth-child(3) img {
+  object-position: 100% 75%;
+}
+
+
+/* ================= SPLIT HEADING ================= */
+
+.splitHeading {
+  position: absolute;
+  top: calc(5rem + 140px);
+  left: 1rem;
+
+  font-size: 6em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: transparent;
+  z-index: 10;
+}
+
+.splitHeading span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  transition: 0.5s;
+}
+
+.splitHeading span:nth-child(1) {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.splitHeading span:nth-child(2) {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.splitHeading span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  background: #fbbf24;
+  color: #0c1136;
+  font-size: 0.25em;
+  text-align: center;
+  padding: 0.2em 1em;
+}
+
+.splitHeading:hover span:nth-child(1) {
+  transform: translateY(-18px);
+}
+
+.splitHeading:hover span:nth-child(2) {
+  transform: translateY(18px);
+}
+
+.splitHeading:hover span:nth-child(3) {
+  transform: translateY(-50%) scaleY(1);
+}
+
+
+
+/* ================= SPLIT SECTION (FIXED ONLY THIS) ================= */
+
+/* ================= SPLIT SECTION (FINAL FIX) ================= */
+
+/* ================= SPLIT SECTION (PERFECT JOIN + NO GAP) ================= */
+
+/* ================= SPLIT SECTION (FINAL PERFECT CROP) ================= */
+
+/* ================= SPLIT SECTION (PERFECT CONNECTION FIX) ================= */
+
+ .splitSection {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  margin: 10vh 0 18vh;
+  overflow: hidden;
+  align-items: center;
+}
+
+/* BOTH HALVES */
+.split {
+  width: 45%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 200% 100%;  /* 🔥 KEY FIX (ONE IMAGE SPLIT) */
+ }  
+
+/* LEFT IMAGE */
+ .left {
+  background-position: 0% 50%;   /* left half */
+  border-right: 0.25px solid black;
+  clip-path: inset(0 0 24% 0);    /* crop bottom only */
+ } 
+
+/* RIGHT IMAGE */
+.right {
+  background-position: 100% 0%;
+  border: 0.25px solid black;
+  clip-path: inset(16% 0 0 0);
+  position: relative;
+}  
+
+/* ================= SCROLL TEXT ================= */
+
+/* ================= TEXT WRAPPER ================= */
+
+/* ================= TEXT ================= */
+
+/* ================= SCROLL SECTION WRAPPER ================= */
+
+.scroll-section-wrapper {
+  position: relative;
+  z-index: 1;
+  background-color: #0f172a;
+}
+
+/* ================= MAIN SECTION ================= */
+
+.scroll-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  isolation: isolate;
+  background-color: #0f172a;
+}
+
+/* ================= TEXT WRAPPER ================= */
+
+.text-wrapper-container {
+  position: absolute;
+  left: 0;
+  top: 88vh;                 /* 🔥 IMPORTANT (do not change) */
+  width: 100vw;
+  height: 20vh;
+  z-index: 3;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* ================= LEFT (SOLID TEXT) ================= */
+
+.plain-text-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 66.666vw;           /* 🔥 KEY */
+  height: 100%;
+  overflow: hidden;
+  z-index: 11;
+}
+
+/* ================= RIGHT (OUTLINE TEXT) ================= */
+
+.masked-text-wrapper {
+  position: absolute;
+  left: 66.666vw;            /* 🔥 KEY */
+  top: 0;
+  width: 33.333vw;           /* 🔥 KEY */
+  height: 100%;
+  overflow: hidden;
+  z-index: 12;
+}
+
+/* ================= TRACK ================= */
+
+.text-track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(50%);
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  will-change: transform;
+}
+
+/* ALIGN RIGHT TRACK PERFECTLY */
+.masked-text-wrapper .text-track {
+  left: -66.666vw;           /* 🔥 CRITICAL */
+}
+
+/* ================= TEXT ================= */
+
+.scroll-text {
+  font-size: 12vw;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+/* SOLID TEXT */
+.scroll-text-solid {
+  color: #ffffff;
+}
+
+/* OUTLINE TEXT */
+.masked-text-outline {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px #ffffff;
+  text-stroke: 1.5px #ffffff;
+}
+
+/* ================= SPLIT SECTION ================= */
+/* ================= TABLET + MOBILE ================= */
+
+/* ================= TABLET + MOBILE FIX ================= */
+
+@media (max-width: 1024px) {
+
+  /* layout */
+  .galleryRow {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 2rem;
+  }
+
+  /* columns */
+  .parallaxWindow {
+    flex: 0 0 90px;
+    height: 320px !important;
+  }
+
+  /* 🔥 FIX IMAGE (THIS IS THE REAL FIX) */
+  .parallaxImg {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: 300%;
+    object-fit: cover;
+  }
+
+  /* keep seamless image */
+  .parallaxWindow:nth-child(1) img {
+    object-position: 0% 75%;
+  }
+
+  .parallaxWindow:nth-child(2) img {
+    object-position: 20% 75%;
+  }
+
+  .parallaxWindow:nth-child(3) img {
+    object-position: 50% 75%;
+  }
+
+  /* heading */
+  .splitHeading {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    text-align: center;
+    font-size: clamp(3.5rem, 4vw, 4rem);
+
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  /* disable hover shift */
+  .splitHeading:hover span:nth-child(1),
+  .splitHeading:hover span:nth-child(2) {
+    transform: none;
+  }
+}

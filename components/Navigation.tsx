@@ -189,7 +189,7 @@ export default function Navigation({
                     Lifestyle & Home Audio
                   </Link>
                   <Link
-                    href="/products/home-cinema"
+                    href="/products/boutique-architectural"
                     className="px-4 py-2.5 text-sm text-text hover:bg-gray-50 hover:text-secondary transition-colors"
                     onClick={() => {
                       setMobileMenuOpen(false);

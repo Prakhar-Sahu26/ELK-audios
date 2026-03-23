@@ -1,57 +1,53 @@
 import { useEffect } from "react";
-import Lenis from "lenis";
 
+/**
+ * Drives horizontal text tracks without a second Lenis instance (parallax hook owns Lenis).
+ * Uses rAF + getBoundingClientRect so motion stays in sync with smooth scroll.
+ */
 export function useHorizontalScroll() {
   useEffect(() => {
+    let animationId = 0;
+    let currentX = 50;
+    let targetX = 50;
 
-    const init = () => {
+    function tick() {
       const textTracks = document.querySelectorAll(".text-track");
       const textWrapper = document.querySelector(".text-wrapper-container");
 
       if (!textWrapper || textTracks.length === 0) {
-        requestAnimationFrame(init); // wait until mounted
+        animationId = requestAnimationFrame(tick);
         return;
       }
 
-      let currentX = 50;
-      let targetX = 50;
+      const wrapperRect = textWrapper.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
 
-      const lenis = new Lenis({
-        duration: 1.8,
-        smoothWheel: true,
+      if (wrapperRect.bottom < 0 || wrapperRect.top > viewportHeight) {
+        currentX += (targetX - currentX) * 0.06;
+        textTracks.forEach((track) => {
+          (track as HTMLElement).style.transform = `translateX(${currentX}%)`;
+        });
+        animationId = requestAnimationFrame(tick);
+        return;
+      }
+
+      const wrapperCenterY = wrapperRect.top + wrapperRect.height / 2;
+      const progress = Math.max(
+        0,
+        Math.min(1, 1 - wrapperCenterY / viewportHeight)
+      );
+      const easedProgress = Math.pow(progress, 2.2);
+      targetX = 50 - easedProgress * 50;
+
+      currentX += (targetX - currentX) * 0.06;
+      textTracks.forEach((track) => {
+        (track as HTMLElement).style.transform = `translateX(${currentX}%)`;
       });
 
-      function onScroll(e: any) {
-        const rect = (textWrapper as HTMLElement).getBoundingClientRect();
-        const vh = window.innerHeight;
+      animationId = requestAnimationFrame(tick);
+    }
 
-        const center = rect.top + rect.height / 2;
-
-        const progress = Math.max(0, Math.min(1, 1 - center / vh));
-        const eased = Math.pow(progress, 2.2);
-
-        targetX = 50 - eased * 50;
-      }
-
-      lenis.on("scroll", onScroll);
-
-      function raf(time: number) {
-        lenis.raf(time);
-
-        currentX += (targetX - currentX) * 0.06;
-
-        textTracks.forEach((track) => {
-          (track as HTMLElement).style.transform =
-            `translateX(${currentX}%)`;
-        });
-
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-    };
-
-    init();
-
+    animationId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animationId);
   }, []);
 }

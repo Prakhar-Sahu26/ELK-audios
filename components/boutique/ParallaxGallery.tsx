@@ -7,7 +7,7 @@ const IMG =
 
 export default function ParallaxGallery() {
   return (
-    <section className="relative pt-[17vh]">
+    <section className="parallax-gallery relative pt-[17vh]">
 
       {/* HEADING */}
       <h2 className={styles.splitHeading}>

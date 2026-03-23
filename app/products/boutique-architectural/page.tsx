@@ -1,7 +1,7 @@
 "use client";
 
+import "@/components/boutique/boutique-globals.css";
 import ParallaxGallery from "@/components/boutique/ParallaxGallery";
-import AgencyBlock from "@/components/boutique/AgencyBlock";
 import SplitSection from "@/components/boutique/SplitSection";
 import LayoutSection from "@/components/boutique/LayoutSection";
 import { useParallax } from "@/components/boutique/hooks/useParallax";
@@ -12,14 +12,12 @@ export default function Page() {
   useHorizontalScroll();
 
   return (
-    <div className="bg-[#0f172a] text-white overflow-x-hidden">
+    <div
+      className="text-white overflow-x-hidden relative"
+      style={{ backgroundColor: "#0f172a" }}
+    >
       <ParallaxGallery />
-
-      <section className="relative min-h-screen">
-        <AgencyBlock />
-        <SplitSection /> {/* ScrollText is inside this */}
-      </section>
-
+      <SplitSection />
       <LayoutSection />
     </div>
   );

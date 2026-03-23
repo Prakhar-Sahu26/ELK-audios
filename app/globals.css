@@ -10,6 +10,28 @@
   --color-text: #0f172a;
 }
 
+/* Lenis: element selectors cannot live in CSS modules (purity rule) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 /* ================= BASE ================= */
 
 @layer base {

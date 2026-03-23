@@ -1,14 +1,23 @@
+"use client";
+
 export default function LayoutSection() {
   return (
-    <section className="flex h-[150vh] w-full">
-      <div className="w-[40%] flex flex-col">
-        <div className="h-[50vh] bg-[#486239]" />
-        <div className="flex-1 bg-[#c1bca4] relative">
-          <div className="absolute right-0 top-0 w-[45%] h-1/2 bg-[#f6b51f]" />
+    <section className="layout-section text-white">
+      <div className="layout-left">
+        <div className="layout-left-top" />
+        <div className="layout-left-bottom">
+          <div className="layout-bottom-left">
+            <div className="layout-label-salt">Salt</div>
+            <div className="layout-bottom-right" />
+          </div>
         </div>
       </div>
 
-      <div className="flex-1 bg-[#7a97af]" />
+      <div className="layout-right">
+        <div className="layout-label-architecture">Architecture</div>
+        <div className="layout-label-add">+</div>
+        <div className="layout-label-interiors">Interiors</div>
+      </div>
     </section>
   );
 }

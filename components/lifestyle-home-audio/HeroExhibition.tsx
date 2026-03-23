@@ -3,24 +3,22 @@ import LifestyleSplitCards from "@/components/lifestyle-home-audio/Section_1";
 
 export default function Page() {
   return (
-    <main className="bg-slate-900 text-white min-h-screen overflow-x-hidden">
+    <main className="m-0 p-0 w-screen h-screen bg-slate-900 text-white overflow-hidden">
 
-      <section className="relative w-full min-h-screen overflow-hidden">
+      <section className="relative m-0 p-0 w-screen h-screen overflow-hidden">
 
-        {/* 🔥 SVG BACKGROUND */}
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage:
-              "url('https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+        {/* 🔥 VIDEO BACKGROUND */}
+        <div className="absolute inset-0 z-0 w-[100vw] h-[100vh] overflow-hidden">
+          <iframe
+            src="https://player.vimeo.com/video/1067672001?background=1&autoplay=1&loop=1&muted=1"
+            className="absolute top-1/2 left-1/2 w-[120vw] h-[120vh] -translate-x-1/2 -translate-y-1/2 opacity-100 pointer-events-none"
+            allow="autoplay; fullscreen; picture-in-picture"
+            title="Lifestyle home audio background video"
+          />
+        </div>
 
         {/* 🔥 OVERLAY */}
-        <div className="absolute inset-0 bg-slate-900/70 z-0" />
+        <div className="absolute inset-0 bg-slate-900/0 z-0" />
 
         <div className="relative z-10 flex flex-col">
 
@@ -31,7 +29,7 @@ export default function Page() {
               min-h-[70vh]
               flex items-center justify-center 
               text-center 
-              px-4
+              px-0
             ">
               <h1 className="
                 font-bold tracking-tight leading-tight
@@ -57,7 +55,7 @@ export default function Page() {
               min-h-screen
               flex items-center justify-center 
               text-center 
-              px-8
+              px-0
             ">
               <h1 className="
                 font-bold tracking-tight leading-tight

@@ -47,7 +47,7 @@ export default function Section_1() {
 
         {/* BACKGROUND */}
         <Image
-          src="https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb67ac7bc/bowers/PDP/Formation-Duo/Formation-Duo-Black/Formation-Duo-Black_Image_4.jpg?sw=2160"
+          src="https://klipsch.imgix.net/general/Klipsch-R-41PM-best-powered-monitors-with-TV.jpg?crop=focalpoint&domain=klipsch.imgix.net&fit=crop&fm=webp&fp-x=0.5&fp-y=0.5&h=1279&ixlib=php-3.3.1&q=100&w=1920"
           alt="Background"
           fill
           className="object-cover"

@@ -18,6 +18,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'audiopro.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'klipsch.imgix.net',
+      },
     ],
   },
 }

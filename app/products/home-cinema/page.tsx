@@ -182,7 +182,6 @@ export default function BoutiqueArchitecturalPage() {
     .scroll-section {
       position: relative;
       width: 100%;
-      min-height: 100vh;
       /* Ensure it doesn't overlap following sections */
       isolation: isolate;
       background-color: #0f172a;

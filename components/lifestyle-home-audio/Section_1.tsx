@@ -47,7 +47,7 @@ export default function Section_1() {
 
         {/* BACKGROUND */}
         <Image
-          src="/assets/lottie/0.png"
+          src="https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb67ac7bc/bowers/PDP/Formation-Duo/Formation-Duo-Black/Formation-Duo-Black_Image_4.jpg?sw=2160"
           alt="Background"
           fill
           className="object-cover"

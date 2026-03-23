@@ -13,7 +13,7 @@ export default function Section_2() {
   {/* 🔥 TOP BACKGROUND (ROWS 1–2) */}
   <div className="absolute top-0 left-0 w-full h-1/2">
     <Image
-      src="/assets/lottie/1.jpeg" // 🔁 change image
+      src="https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-C10MkII-W-airplay2-google-cast-chromecast-AudioPro-white_3.png?v=1758186661&width=1790"
       alt="Top Background"
       fill
       className="object-cover"
@@ -23,7 +23,7 @@ export default function Section_2() {
   {/* 🔥 BOTTOM BACKGROUND (ROWS 3–4) */}
   <div className="absolute bottom-0 left-0 w-full h-1/2">
     <Image
-      src="/assets/lottie/3.jpg" // 🔁 change image
+      src="https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-C10MkII-W-airplay2-google-cast-chromecast-AudioPro-white_2.png?v=1758186661&width=1790"
       alt="Bottom Background"
       fill
       className="object-cover"
@@ -54,7 +54,7 @@ export default function Section_2() {
     {/* 5 IMAGE CARD */}
     <div className="relative overflow-hidden">
       <Image
-        src="/assets/lottie/painting.jpg"
+        src="https://audiopro.com/cdn/shop/files/AP_Hero_-_Drumfire_W-2.jpg?v=1767867832&width=2000"
         alt=""
         fill
         className="object-cover"
@@ -63,11 +63,13 @@ export default function Section_2() {
 
     {/* 6 VIDEO (SPAN 2 ROWS) */}
     <div className="row-span-2 relative overflow-hidden">
-      <Image
-        src="/assets/lottie/video-thumb.jpg"
-        alt=""
-        fill
-        className="object-cover"
+      <video
+        src="https://audiopro.com/cdn/shop/videos/c/vp/16141f6d9f0944bca320d1f565a049f9/16141f6d9f0944bca320d1f565a049f9.HD-720p-3.0Mbps-49552585.mp4?v=0"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
       {/* PLAY */}
@@ -94,7 +96,7 @@ export default function Section_2() {
 
         {/* 🔥 BACKGROUND IMAGE (UNCHANGED) */}
         <Image
-          src="/assets/lottie/2.jpeg"
+          src="https://cdn.shopify.com/s/files/1/0729/3072/2025/files/Jamo-C113-Bookshelf-Speaker-high-gloss-black-detail-840-840-1.png?v=1745560299&width=1800"
           alt="Background"
           fill
           priority

@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 
 export default function Section_3() {
   const images = [
-    "https://audiopro.com/cdn/shop/files/Hero-A10MkII-W.jpg?v=1759826413&width=2000",
-    "https://audiopro.com/cdn/shop/files/Hero-A28W.jpg?v=1759223933&width=2000",
-    "https://audiopro.com/cdn/shop/files/AP_Hero_-_Drumfire_W-2.jpg?v=1767867832&width=2000"
+    "/assets/lottie/Untitled_1.jpg",
+    "/assets/lottie/Untitled_2.jpg",
+    "/assets/lottie/Untitled_3.jpg"
   ];
 
   const [current, setCurrent] = useState(0);

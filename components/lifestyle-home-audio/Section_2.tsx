@@ -1,153 +1,183 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+import { lifestyleCards } from "@/data/lifestyleCards";
 
 export default function Section_2() {
+  const [active, setActive] = useState<number | null>(null);
+
+  const toggle = (id: number) => {
+    setActive((prev) => (prev === id ? null : id));
+  };
+
+  const main = lifestyleCards[0];
+  const who = lifestyleCards[1];
+  const lifestyle = lifestyleCards[2];
+
   return (
     <section className="relative w-full overflow-hidden md:h-screen">
 
       {/* ================= MOBILE ================= */}
-      {/* ================= MOBILE ================= */}
-<div className="md:hidden relative w-full aspect-[1/2] overflow-hidden">
+      <div className="md:hidden relative w-full aspect-[1/2] overflow-hidden">
 
-  {/* 🔥 TOP BACKGROUND (ROWS 1–2) */}
-  <div className="absolute top-0 left-0 w-full h-1/2">
-    <Image
-      src="/assets/lottie/1.jpeg" // 🔁 change image
-      alt="Top Background"
-      fill
-      className="object-cover"
-    />
-  </div>
+        {/* BACKGROUNDS */}
+        <div className="absolute top-0 left-0 w-full h-1/2">
+          <Image src="/assets/lifestyle/background/Klipsch-R-41PM-best-powered-monitors-with-TV.webp" alt="" fill className="object-cover scale-100" />
+        </div>
 
-  {/* 🔥 BOTTOM BACKGROUND (ROWS 3–4) */}
-  <div className="absolute bottom-0 left-0 w-full h-1/2">
-    <Image
-      src="/assets/lottie/3.jpg" // 🔁 change image
-      alt="Bottom Background"
-      fill
-      className="object-cover"
-    />
-  </div>
+        <div className="absolute bottom-0 left-0 w-full h-1/2">
+          <Image src="/assets/lottie/3.jpeg" alt="" fill className="object-cover" />
+        </div>
 
-  {/* 🔥 OVERLAY (optional for readability) */}
-  <div className="absolute inset-0 bg-black/20 z-0" />
+        <div className="absolute inset-0 bg-black/20 z-0" />
 
-  {/* 🔥 GRID */}
-  <div className="relative z-10 grid grid-cols-2 grid-rows-4 h-full">
+        {/* GRID */}
+        <div className="relative z-10 grid grid-cols-2 grid-rows-4 h-full">
 
-    {/* 1 EMPTY */}
-    <div />
+          <div />
+          {/* GREEN (UNCHANGED) */}
+          <a className="group bg-[#3f3f3f]/8  0 relative overflow-hidden">
+            <Image
+              src="/assets/lifestyle/cards/formationbass.png"
+              alt={who.title}
+              fill
+              className="object-cover scale-90 transition duration-500 group-hover:scale-100"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-2">
+              {who.title}
+            </p>
+          </a>
+          <div />
+          <div />
 
-    {/* 2 TOP CARD */}
-    <a className="bg-[#4a5a5a]/90 backdrop-blur-md text-white p-4 flex flex-col justify-between">
-      <p className="text-sm">Neue Maßstäbe</p>
-      <span className="text-xs opacity-70">→ MEHR LESEN</span>
-    </a>
+          {/* CARD 2 */}
+          <a className="group bg-[#1f2933]/70 relative overflow-hidden">
+            <Image
+              src="/assets/lifestyle/cards/black-earbuds.png"
+              alt={lifestyle.title}
+              fill
+              className="object-cover scale-80 transition duration-500 group-hover:scale-100"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-2">
+              {lifestyle.title}
+            </p>
+          </a>
 
-    {/* 3 EMPTY */}
-    <div />
-
-    {/* 4 EMPTY */}
-    <div />
-
-    {/* 5 IMAGE CARD */}
-    <div className="relative overflow-hidden">
-      <Image
-        src="/assets/lottie/painting.jpg"
-        alt=""
-        fill
-        className="object-cover"
-      />
-    </div>
-
-    {/* 6 VIDEO (SPAN 2 ROWS) */}
-    <div className="row-span-2 relative overflow-hidden">
-      <Image
-        src="/assets/lottie/video-thumb.jpg"
-        alt=""
-        fill
-        className="object-cover"
-      />
-
-      {/* PLAY */}
-      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-          ▶
+          <div />
+          {/* CARD 3 */}
+          <a className="group bg-[#5a4636]/80 relative overflow-hidden">
+            <Image
+              src="/assets/lifestyle/cards/egg-speaker.png"
+              alt={who.title}
+              fill
+              className="object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-2">
+              {who.title}
+            </p>
+          </a>
+          {/* CARD 4 */}
+          <a className="group bg-[#2a1f1a]/80 relative overflow-hidden">
+            <Image
+              src="/assets/lifestyle/cards/black-speaker.png"
+              alt={who.title}
+              fill
+              className="object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-2">
+              {who.title}
+            </p>
+          </a>
         </div>
       </div>
-    </div>
 
-    {/* 7 RED CARD */}
-    <a className="bg-[#c44532]/90 backdrop-blur-md text-white p-4 flex flex-col justify-between">
-      <p className="text-sm">Radikale Details</p>
-      <span className="text-xs opacity-70">→ MEHR LESEN</span>
-    </a>
-
-    {/* 8 EMPTY */}
-    <div />
-
-  </div>
-</div>
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:block w-full h-full">
 
-        {/* 🔥 BACKGROUND IMAGE (UNCHANGED) */}
+        {/* BACKGROUND */}
         <Image
-          src="/assets/lifestyle/background/Klipsch-R-41PM-best-powered-monitors-with-TV.webp"
-          alt="Background"
+          src="/assets/lifestyle/background/backgorund__.png"
+          alt=""
           fill
           priority
           className="object-cover"
         />
 
-        {/* 🔥 DARK OVERLAY */}
-        <div className="absolute inset-0 bg-slate-900/60 z-0" />
+        <div className="absolute inset-0 z-0" />
 
-        {/* 🔥 ORIGINAL GRID (UNCHANGED) */}
-        <div className="relative z-10 grid grid-cols-4 grid-rows-2 h-full">
+        {/* GRID */}
+        {/* GRID */}
+<div className="relative z-10 grid grid-cols-4 grid-rows-2 h-full">
 
-          {/* LEFT VIDEO BLOCK */}
-          <a
-            href="#"
-            className="row-span-2 col-span-1 relative group overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                ▶
-              </div>
-            </div>
-          </a>
+  {/* LEFT BLOCK */}
+  <div className="row-span-2 col-span-1 relative overflow-hidden" />
 
-          {/* EMPTY */}
-          <div className="col-span-1 bg-[#e5e1d8]" />
+  {/* CARD 1 */}
+  <div className="group bg-[#3f3f3f] opacity-75 hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+    <Image
+      src="/assets/lifestyle/cards/formationbass.png"
+      alt={who.title}
+      fill
+      className="object-cover transition duration-500 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+    <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-4">
+      {who.title}
+    </p>
+  </div>
 
-          {/* ORANGE */}
-          <a className="col-span-1 bg-[#c9904a] text-white p-6 flex flex-col justify-between">
-            <p className="text-lg">
-              How was a panel painting created in the 16th century?
-            </p>
-            <span className="text-xs opacity-70">→ READ MORE</span>
-          </a>
+  {/* CARD 2 */}
+  <div className="group bg-[#1f2933] opacity-75 hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+    <Image
+      src="/assets/lifestyle/cards/black-earbuds.png"
+      alt={who.title}
+      fill
+      className="object-cover transition duration-500 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+    <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-4">
+      {who.title}
+    </p>
+  </div>
 
-          {/* LIGHT */}
-          <a className="col-span-1 bg-[#e5e1d8] text-black p-6 flex flex-col justify-between">
-            <p className="text-lg">The Tower of Babel</p>
-            <span className="text-xs opacity-70">→ READ MORE</span>
-          </a>
+  {/* CARD 3 */}
+  <div className="group bg-[#5a4636] opacity-85 hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+    <Image
+      src="/assets/lifestyle/cards/egg-speaker.png"
+      alt={who.title}
+      fill
+      className="object-cover transition duration-500 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+    <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-4">
+      {who.title}
+    </p>
+  </div>
 
-          {/* IMAGE CONTINUE */}
-          <div className="col-span-2" />
+  {/* EMPTY SPACE */}
+  <div className="col-span-2" />
 
-          {/* DARK CARD */}
-          <a className="col-span-1 bg-[#2f3a3a] text-white p-6 flex flex-col justify-between">
-            <p className="text-lg">New Dimensions</p>
-            <span className="text-xs opacity-70">→ READ MORE</span>
-          </a>
+  {/* CARD 4 */}
+  <div className="group bg-[#2a1f1a] opacity-95 hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+    <Image
+      src="/assets/lifestyle/cards/black-speaker.png"
+      alt={who.title}
+      fill
+      className="object-cover transition duration-500 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+    <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-4">
+      {who.title}
+    </p>
+  </div>
 
-        </div>
+</div>
       </div>
-
     </section>
   );
 }

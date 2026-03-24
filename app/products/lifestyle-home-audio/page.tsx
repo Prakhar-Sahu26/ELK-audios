@@ -4,6 +4,8 @@ import Section_2 from "@/components/lifestyle-home-audio/Section_2";
 import Section_3 from "@/components/lifestyle-home-audio/Section_3";
 import Section_4 from "@/components/lifestyle-home-audio/Section_4";
 import Section_5 from "@/components/lifestyle-home-audio/Section_5";
+import Section_6 from "@/components/lifestyle-home-audio/Section_6";
+import "@/components/boutique/boutique.module.css";
 
 export default function Page() {
     return <>
@@ -13,6 +15,7 @@ export default function Page() {
         <Section_3/>
         <Section_4/>
         <Section_5/>
+        <Section_6/>
         <section className="Section_5 studio-info bg-[#0f172a]">
 
             <div className="studio-info-inner">

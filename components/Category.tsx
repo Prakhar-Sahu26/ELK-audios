@@ -48,7 +48,7 @@ export default function Category() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/40 z-10" />
-          <div className="relative z-20 text-white text-center px-4">
+          <div className="relative z-20 flex min-h-0 w-full flex-1 flex-col items-center justify-center px-4 text-center text-white">
             <div className="inline-block relative md:inline-flex md:items-center md:justify-center md:gap-2">
               <Link href={category.link}>
                 <h2 className="text-4xl font-bold">{category.title}</h2>

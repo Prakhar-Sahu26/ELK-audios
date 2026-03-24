@@ -375,6 +375,55 @@ body {
     line-height: 0.9;
   }
 
+  /* Link inside heading (projects strip): do not use .team-text a “footer link” styles */
+  .team-text h2 a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+    color: inherit;
+    text-decoration: none;
+    padding: 0;
+    white-space: normal;
+  }
+
+  .team-text h2 a::after {
+    display: none;
+  }
+
+  .team-section a.projects-view-more {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
+      "SF Pro Text", sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(248, 250, 252, 0.95);
+    white-space: nowrap;
+    padding: 0.7rem 1.6rem;
+    border: 1px solid rgba(248, 250, 252, 0.5);
+    border-radius: 9999px;
+    background: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .team-section a.projects-view-more:hover {
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.85);
+    background: none;
+  }
+
+  .team-section a.projects-view-more::after {
+    display: none;
+  }
+
   .team-text .italic {
     font-style: italic;
     font-weight: 300;

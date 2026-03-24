@@ -34,6 +34,7 @@ export default function Page() {
               <h1 className="
                 font-bold tracking-tight leading-tight
                 text-3xl
+                [text-shadow:0_3px_14px_rgba(0,0,0,0.65)]
               ">
                 Lifestyle{" "}
                 <span className="text-amber-400 block">
@@ -59,6 +60,7 @@ export default function Page() {
               <h1 className="
                 font-bold tracking-tight leading-tight
                 text-6xl lg:text-7xl xl:text-8xl
+                [text-shadow:0_4px_20px_rgba(0,0,0,0.7)]
               ">
                 Lifestyle{" "}
                 <span className="text-amber-400 inline">

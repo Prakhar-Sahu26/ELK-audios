@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 
 export default function Section_3() {
   const images = [
-    "/assets/lottie/Untitled_1.jpg",
-    "/assets/lottie/Untitled_2.jpg",
-    "/assets/lottie/Untitled_3.jpg"
+    "/assets/Sec-3(slider_1).webp",
+    "/assets/Sec-3(slider_2).webp",
+    "/assets/Sec-3(slider_3).webp"
   ];
 
   const [current, setCurrent] = useState(0);

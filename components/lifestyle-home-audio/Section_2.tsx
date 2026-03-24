@@ -96,7 +96,7 @@ export default function Section_2() {
 
         {/* 🔥 BACKGROUND IMAGE (UNCHANGED) */}
         <Image
-          src="https://cdn.shopify.com/s/files/1/0729/3072/2025/files/Jamo-C113-Bookshelf-Speaker-high-gloss-black-detail-840-840-1.png?v=1745560299&width=1800"
+          src="https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Library-Sites-bowers_europe_shared/default/dwd73d314a/Series/M-Series/m-series_hero_mainbanner-desktop.jpg?sw=2160"
           alt="Background"
           fill
           priority
@@ -104,7 +104,7 @@ export default function Section_2() {
         />
 
         {/* 🔥 DARK OVERLAY */}
-        <div className="absolute inset-0 bg-black/20 z-0" />
+        <div className="absolute inset-0 bg-slate-900/60 z-0" />
 
         {/* 🔥 ORIGINAL GRID (UNCHANGED) */}
         <div className="relative z-10 grid grid-cols-4 grid-rows-2 h-full">

@@ -17,104 +17,117 @@ export default function Section_1() {
       {/* ================= MOBILE ================= */}
       <div className="md:hidden w-full aspect-[1/1] flex flex-col">
 
-  {/* GREEN */}
-  <a className="bg-[#2f4f3f]/80 flex-1 relative overflow-hidden">
-    <Image src={main.image} alt={main.title} fill className="object-cover" />
-    <div className="absolute inset-0 bg-black/20" />
-      <p className="relative z-10">{main.title}</p>
-  </a>
+        {/* BACKGROUND */}
+        <Image
+          src="/assets/lifestyle/background/AP_Hero_-_Drumfire_W-2.jpg"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 z-0" />
 
-  {/* WHITE + BEIGE */}
-  <div className="flex flex-1">
+        {/* GREEN (UNCHANGED) */}
+        <a className="bg-[#2f4f3f]/60 flex flex-1 items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/20" />
+          <p className="relative z-10 text-white text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit...
+          </p>
+        </a>
 
-    <a className="bg-[#e5e1d8]/90 w-1/2 relative overflow-hidden">
-      <Image src={who.image} alt={who.title} fill className="object-cover" />
-      <div className="absolute inset-0 bg-black/20" />
-      <p className="relative z-10">{who.title}</p>
-    </a>
+        {/* WHITE + BEIGE */}
+        <div className="flex flex-1">
 
-    <a className="bg-[#c8b8a6]/90 w-1/2 relative overflow-hidden">
-      <Image src={lifestyle.image} alt={lifestyle.title} fill className="object-cover" />
-      <div className="absolute inset-0 bg-black/20" />
-      <p className="relative z-10">{lifestyle.title}</p>
-    </a>
+          {/* WHITE */}
+          <a className="group bg-[#e5e1d8]/60 w-1/2 relative overflow-hidden">
 
-  </div>
-</div>
+            {/* IMAGE */}
+            <Image
+              src="/assets/lifestyle/cards/white-speaker.png"
+              alt={who.title}
+              fill
+              className="object-cover transition duration-500 group-hover:scale-110"
+            />
+
+            {/* GRADIENT OVERLAY */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+
+            {/* TEXT */}
+            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-2">
+              {who.title}
+            </p>
+          </a>
+
+          {/* BEIGE */}
+          <a className="group bg-[#c8b8a6]/60 w-1/2 relative overflow-hidden">
+
+            <Image
+              src="/assets/lifestyle/cards/black-headphone.png"
+              alt={lifestyle.title}
+              fill
+              className="object-cover transition duration-500 group-hover:scale-110"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+
+            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-2">
+              {lifestyle.title}
+            </p>
+          </a>
+
+        </div>
+      </div>
 
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:block w-full h-full">
 
         {/* BACKGROUND */}
         <Image
-          src="https://klipsch.imgix.net/general/Klipsch-R-41PM-best-powered-monitors-with-TV.jpg?crop=focalpoint&domain=klipsch.imgix.net&fit=crop&fm=webp&fp-x=0.5&fp-y=0.5&h=1279&ixlib=php-3.3.1&q=100&w=1920"
+          src="/assets/lifestyle/background/AP_Hero_-_Drumfire_W-2.jpg"
           alt="Background"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-slate-900/60 z-0" />
+        <div className="absolute inset-0 z-0" />
 
-        {/* GRID (UNCHANGED STRUCTURE) */}
         <div className="relative z-10 grid grid-cols-4 grid-rows-2 h-full">
 
-          {/* EMPTY */}
           <div className="col-span-2" />
 
-          {/* GREEN */}
-          <a
-            href={main.link}
-            onMouseEnter={() => setHovered(main.id)}
-            onMouseLeave={() => setHovered(null)}
-            className="col-span-2 bg-[#2f4f3f]/80 backdrop-blur-md text-white flex items-center justify-center text-center px-6 relative overflow-hidden"
-          >
-            {main.video && hovered === main.id ? (
-              <video
-                src={main.video}
-                autoPlay
-                muted
-                loop
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              <Image
-                src={main.image}
-                alt={main.title}
-                fill
-                className="object-cover"
-              />
-            )}
+          {/* GREEN (UNCHANGED) */}
+            <a
+  href={main.link}
+  className="group col-span-2 relative overflow-hidden bg-[#2f4f3f] opacity-75 hover:opacity-100 flex items-center justify-center text-center px-6"
+>
+  {/* Bottom gray gradient overlay on hover */}
+  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
 
-            <div className="absolute inset-0 bg-black/40" />
-            <p className="relative z-10">{main.title}</p>
-          </a>
+  {/* Always visible text */}
+  <p className="relative z-10 text-white text-2xl font-semibold px-4">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit...
+  </p>
+</a>
 
           {/* WHITE */}
           <a
             href={who.link}
             onMouseEnter={() => setHovered(who.id)}
             onMouseLeave={() => setHovered(null)}
-            className="bg-[#e5e1d8]/90 backdrop-blur-md text-black flex items-center justify-center relative overflow-hidden"
+            className="group bg-[#e5e1d8] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
           >
-            {who.video && hovered === who.id ? (
-              <video
-                src={who.video}
-                autoPlay
-                muted
-                loop
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              <Image
-                src={who.image}
-                alt={who.title}
-                fill
-                className="object-cover"
-              />
-            )}
+            <Image
+              src="/assets/lifestyle/cards/white-speaker.png"
+              alt={who.title}
+              fill
+              className="object-cover transition duration-500 group-hover:scale-110"
+            />
 
-            <div className="absolute inset-0 bg-black/20" />
-            <p className="relative z-10 font-medium">{who.title}</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+
+            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 font-medium opacity-0 group-hover:opacity-100 transition duration-300 px-4">
+              {who.title}
+            </p>
           </a>
 
           {/* BEIGE */}
@@ -122,30 +135,22 @@ export default function Section_1() {
             href={lifestyle.link}
             onMouseEnter={() => setHovered(lifestyle.id)}
             onMouseLeave={() => setHovered(null)}
-            className="bg-[#c8b8a6]/90 backdrop-blur-md text-black flex items-center justify-center relative overflow-hidden"
+            className="group bg-[#c8b8a6] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
           >
-            {lifestyle.video && hovered === lifestyle.id ? (
-              <video
-                src={lifestyle.video}
-                autoPlay
-                muted
-                loop
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              <Image
-                src={lifestyle.image}
-                alt={lifestyle.title}
-                fill
-                className="object-cover"
-              />
-            )}
+            <Image
+              src="/assets/lifestyle/cards/black-headphone.png"
+              alt={lifestyle.title}
+              fill
+              className="object-cover transition duration-500 group-hover:scale-110"
+            />
 
-            <div className="absolute inset-0 bg-black/20" />
-            <p className="relative z-10 font-medium">{lifestyle.title}</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+
+            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 font-medium opacity-0 group-hover:opacity-100 transition duration-300 px-4">
+              {lifestyle.title}
+            </p>
           </a>
 
-          {/* EMPTY */}
           <div className="col-span-2" />
 
         </div>

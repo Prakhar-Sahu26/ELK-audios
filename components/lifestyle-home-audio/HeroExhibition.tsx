@@ -3,7 +3,7 @@ import LifestyleSplitCards from "@/components/lifestyle-home-audio/Section_1";
 
 export default function Page() {
   return (
-    <main className="m-0 p-0 w-full bg-slate-900 text-white overflow-hidden">
+    <main className="m-0 p-0 w-full text-white overflow-hidden">
 
       <section className="relative left-1/2 -translate-x-1/2 m-0 p-0 w-[100vw] max-w-none overflow-hidden">
 
@@ -18,7 +18,7 @@ export default function Page() {
         </div>
 
         {/* 🔥 OVERLAY */}
-        <div className="absolute inset-x-0 top-0 h-[70vh] md:inset-0 md:h-full bg-slate-900/0 z-0" />
+        <div className="absolute inset-x-0 top-0 h-[70vh] md:inset-0 md:h-full  z-0" />
 
         <div className="relative z-10 flex flex-col">
 
@@ -43,8 +43,7 @@ export default function Page() {
 
               <div className="
                 absolute bottom-0 left-0 w-full 
-                h-24 from-slate-900 to-transparent
-              " />
+                h-24 " />
             </div>
           </div>
 
@@ -70,7 +69,6 @@ export default function Page() {
               <div className="
                 absolute bottom-0 left-0 w-full 
                 h-40
-                bg-gradient-to-t from-slate-900 to-transparent
               " />
             </div>
           </div>

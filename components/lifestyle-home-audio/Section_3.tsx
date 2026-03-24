@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 
 export default function Section_3() {
   const images = [
-    "/assets/Sec-3(slider_1).webp",
-    "/assets/Sec-3(slider_2).webp",
-    "/assets/Sec-3(slider_3).webp"
+    "/assets/lifestyle/background/sec_3_slider_1.png",
+    "/assets/lifestyle/background/sec_3_slider_2.png",
+    "/assets/lifestyle/background/sec_3_slider_3.png"
   ];
 
   const [current, setCurrent] = useState(0);
@@ -48,20 +48,36 @@ export default function Section_3() {
           <div />
           <div />
 
-          <a className="aspect-square bg-[#e5e1d8] flex items-center justify-center">
-            Ticket Info
+          <a className="group bg-[#ffffff] opacity-60 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden">
+            <Image
+              src="/assets/lifestyle/cards/ear_buds.png"
+              alt="Ear buds"
+              fill
+              className="object-cover transition duration-500 group-hover:scale-110"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+
+            <p className="absolute inset-0 flex items-center justify-center text-black text-center z-10 font-medium opacity-0 group-hover:opacity-100 transition duration-300 px-4">
+              Ticket Info
+            </p>
           </a>
 
           <a className="aspect-square bg-[#6b2c1f] text-white p-4 flex items-start">
             Tickets & Info
           </a>
 
-          <div className="col-span-4" />
+          <div className="col-span-4 " />
 
           {/* ✅ FIXED BIG CARD */}
-          <a className="col-span-2 h-full bg-[#c9904a] text-white flex items-center justify-center">
-            Musikstück
-          </a>
+          <div className="col-span-2 h-full relative overflow-hidden">
+            <Image
+              src="/assets/lifestyle/cards/Sec-3_woofers.jpg"
+              alt="Woofers"
+              fill
+              className="object-cover"
+            />
+          </div>
 
           {/* CONTROLLER */}
           <div className="aspect-square flex items-center justify-center gap-2">

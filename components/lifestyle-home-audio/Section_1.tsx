@@ -28,7 +28,7 @@ export default function Section_1() {
         <div className="absolute inset-0 z-0" />
 
         {/* GREEN (UNCHANGED) */}
-        <a className="bg-[#2f4f3f]/60 flex flex-1 items-center justify-center relative overflow-hidden">
+        <a className="bg-[#3b3f46]/90 flex flex-1 items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20" />
           <p className="relative z-10 text-white text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit...
@@ -39,7 +39,7 @@ export default function Section_1() {
         <div className="flex flex-1">
 
           {/* WHITE */}
-          <a className="group bg-[#1c1f26]/60 w-1/2 relative overflow-hidden">
+          <a className="group bg-[#404040]/90 w-1/2 relative overflow-hidden">
 
             {/* IMAGE */}
             <Image
@@ -59,10 +59,10 @@ export default function Section_1() {
           </a>
 
           {/* BEIGE */}
-          <a className="group bg-[#c8b8a6]/60 w-1/2 relative overflow-hidden">
+          <a className="group bg-[#2a2623]/90 w-1/2 relative overflow-hidden">
 
             <Image
-              src="/assets/lifestyle/cards/black-headphone.png"
+              src="/assets/lifestyle/cards/white-headphone.png"
               alt={lifestyle.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"
@@ -110,8 +110,7 @@ export default function Section_1() {
           </a>
 
           {/* WHITE */}
-          <a
-            href={who.link}
+          <div
             onMouseEnter={() => setHovered(who.id)}
             onMouseLeave={() => setHovered(null)}
             className="group bg-[#404040] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
@@ -128,7 +127,7 @@ export default function Section_1() {
             <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 font-medium opacity-0 group-hover:opacity-100 transition duration-300 px-4">
               {who.title}
             </p>
-          </a>
+          </div>
 
           {/* BEIGE */}
           <a
@@ -138,7 +137,7 @@ export default function Section_1() {
             className="group bg-[#2a2623] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
           >
             <Image
-              src="/assets/lifestyle/cards/black-headphone.png"
+              src="/assets/lifestyle/cards/white-headphone.png"
               alt={lifestyle.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"

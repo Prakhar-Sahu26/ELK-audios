@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 
 export default function Section_3() {
   const images = [
-    "/assets/Sec-3(slider_1).webp",
-    "/assets/Sec-3(slider_2).webp",
+    "/assets/lifestyle/background/purple-bg.png",
+    "/",
     "/assets/Sec-3(slider_3).webp"
   ];
 

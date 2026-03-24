@@ -17,20 +17,22 @@ export default function Section_4() {
           </a>
 
           {/* VIDEO (3x2) */}
-          <a className="col-span-3 row-span-2 relative overflow-hidden">
+          <a className="col-span-3 row-span-2 relative overflow-hidden bg-black">
 
-            <Image
-              src="/assets/lottie/video-thumb.jpg"
-              alt="Video"
-              fill
-              className="object-cover"
-            />
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/assets/lifestyle/cards/earbuds_video.mp4" type="video/mp4" />
+            </video>
 
-            {/* PLAY */}
+            {/* OVERLAY */}
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
-                ▶
-              </div>
+
             </div>
 
           </a>

@@ -19,13 +19,11 @@ export default function Section_4() {
           {/* VIDEO (3x2) */}
           <a className="col-span-3 row-span-2 relative overflow-hidden">
 
-            <video
-              src="https://audiopro.com/cdn/shop/videos/c/vp/16141f6d9f0944bca320d1f565a049f9/16141f6d9f0944bca320d1f565a049f9.HD-720p-3.0Mbps-49552585.mp4?v=0"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
+            <Image
+              src="/assets/lottie/video-thumb.jpg"
+              alt="Video"
+              fill
+              className="object-cover"
             />
 
             {/* PLAY */}
@@ -40,7 +38,7 @@ export default function Section_4() {
           {/* LEFT BOTTOM CARD */}
           <a className="aspect-square bg-[#e5e1d8] flex items-center justify-center">
             <Image
-              src="https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-C10MkII-W-airplay2-google-cast-chromecast-AudioPro-white_2.png?v=1758186661&width=1790"
+              src="/assets/lottie/character.png"
               alt="Character"
               width={100}
               height={100}
@@ -58,13 +56,12 @@ export default function Section_4() {
           {/* 🔥 VIDEO (ROWS 1–2 FULL WIDTH) */}
           <a className="col-span-2 row-span-2 relative overflow-hidden">
 
-            <video
-              src="https://audiopro.com/cdn/shop/videos/c/vp/16141f6d9f0944bca320d1f565a049f9/16141f6d9f0944bca320d1f565a049f9.HD-720p-3.0Mbps-49552585.mp4?v=0"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover object-center"
+            <Image
+              src="/assets/lottie/video-thumb.jpg"
+              alt="Video"
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
             />
 
             {/* PLAY */}
@@ -84,7 +81,7 @@ export default function Section_4() {
           {/* 🔥 BOTTOM RIGHT CARD */}
           <a className="aspect-square bg-[#e5e1d8] flex items-center justify-center">
             <Image
-              src="https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-C10MkII-W-airplay2-google-cast-chromecast-AudioPro-white_2.png?v=1758186661&width=1790"
+              src="/assets/lottie/character.png"
               alt="Character"
               width={80}
               height={80}

@@ -47,7 +47,7 @@ export default function Section_1() {
 
         {/* BACKGROUND */}
         <Image
-          src="https://klipsch.imgix.net/general/Klipsch-R-41PM-best-powered-monitors-with-TV.jpg?crop=focalpoint&domain=klipsch.imgix.net&fit=crop&fm=webp&fp-x=0.5&fp-y=0.5&h=1279&ixlib=php-3.3.1&q=100&w=1920"
+          src="/assets/lottie/0.png"
           alt="Background"
           fill
           className="object-cover"

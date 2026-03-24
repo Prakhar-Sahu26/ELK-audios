@@ -83,7 +83,7 @@ export default function Section_1() {
 
         {/* BACKGROUND */}
         <Image
-          src="/assets/lifestyle/background/AP_Hero_-_Drumfire_W-2.jpg"
+          src="/assets/lifestyle/background/earphone_wallpaper.jpg"
           alt="Background"
           fill
           className="object-cover"
@@ -116,7 +116,7 @@ export default function Section_1() {
             className="group bg-[#404040] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
           >
             <Image
-              src="/assets/lifestyle/cards/black-background_speaker.png"
+              src="/assets/lifestyle/cards/black-earbuds.png"
               alt={who.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"
@@ -137,7 +137,7 @@ export default function Section_1() {
             className="group bg-[#2a2623] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
           >
             <Image
-              src="/assets/lifestyle/cards/white-headphone.png"
+              src="/assets/lifestyle/cards/ear_buds.png"
               alt={lifestyle.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"

@@ -94,7 +94,7 @@ export default function Section_2() {
 
         {/* 🔥 BACKGROUND IMAGE (UNCHANGED) */}
         <Image
-          src="https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Library-Sites-bowers_europe_shared/default/dwd73d314a/Series/M-Series/m-series_hero_mainbanner-desktop.jpg?sw=2160"
+          src="/assets/lifestyle/background/Klipsch-R-41PM-best-powered-monitors-with-TV.webp"
           alt="Background"
           fill
           priority

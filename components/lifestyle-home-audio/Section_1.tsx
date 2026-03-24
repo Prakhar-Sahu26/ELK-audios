@@ -39,11 +39,11 @@ export default function Section_1() {
         <div className="flex flex-1">
 
           {/* WHITE */}
-          <a className="group bg-[#e5e1d8]/60 w-1/2 relative overflow-hidden">
+          <a className="group bg-[#1c1f26]/60 w-1/2 relative overflow-hidden">
 
             {/* IMAGE */}
             <Image
-              src="/assets/lifestyle/cards/white-speaker.png"
+              src="/assets/lifestyle/cards/black-background_speaker.png"
               alt={who.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"
@@ -96,28 +96,28 @@ export default function Section_1() {
           <div className="col-span-2" />
 
           {/* GREEN (UNCHANGED) */}
-            <a
-  href={main.link}
-  className="group col-span-2 relative overflow-hidden bg-[#2f4f3f] opacity-75 hover:opacity-100 flex items-center justify-center text-center px-6"
->
-  {/* Bottom gray gradient overlay on hover */}
-  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+          <a
+            href={main.link}
+            className="group col-span-2 relative overflow-hidden bg-[#3b3f46] opacity-75 hover:opacity-100 flex items-center justify-center text-center px-6"
+          >
+            {/* Bottom gray gradient overlay on hover */}
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
 
-  {/* Always visible text */}
-  <p className="relative z-10 text-white text-2xl font-semibold px-4">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit...
-  </p>
-</a>
+            {/* Always visible text */}
+            <p className="relative z-10 text-white text-2xl font-semibold px-4">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit...
+            </p>
+          </a>
 
           {/* WHITE */}
           <a
             href={who.link}
             onMouseEnter={() => setHovered(who.id)}
             onMouseLeave={() => setHovered(null)}
-            className="group bg-[#e5e1d8] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
+            className="group bg-[#404040] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
           >
             <Image
-              src="/assets/lifestyle/cards/white-speaker.png"
+              src="/assets/lifestyle/cards/black-background_speaker.png"
               alt={who.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"
@@ -135,7 +135,7 @@ export default function Section_1() {
             href={lifestyle.link}
             onMouseEnter={() => setHovered(lifestyle.id)}
             onMouseLeave={() => setHovered(null)}
-            className="group bg-[#c8b8a6] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
+            className="group bg-[#2a2623] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
           >
             <Image
               src="/assets/lifestyle/cards/black-headphone.png"

@@ -120,7 +120,7 @@ export default function Section_2() {
   {/* CARD 1 */}
   <div className="group bg-[#3f3f3f] hover:opacity-100 backdrop-blur-md relative overflow-hidden">
     <Image
-      src="/assets/lifestyle/cards/formationbass.png"
+      src="/assets/lifestyle/cards/formationbass_dualdriver_desktop.jpg"
       alt={who.title}
       fill
       className="object-cover transition duration-500 group-hover:scale-110"
@@ -165,7 +165,7 @@ export default function Section_2() {
   {/* CARD 4 */}
   <div className="group bg-[#2a1f1a] hover:opacity-100 backdrop-blur-md relative overflow-hidden">
     <Image
-      src="/assets/lifestyle/cards/black-speaker.png"
+      src="/assets/lifestyle/cards/Hero-C10_MkII_W.webp"
       alt={who.title}
       fill
       className="object-cover transition duration-500 group-hover:scale-110"

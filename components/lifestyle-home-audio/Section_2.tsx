@@ -118,9 +118,9 @@ export default function Section_2() {
   <div className="row-span-2 col-span-1 relative overflow-hidden" />
 
   {/* CARD 1 */}
-  <div className="group bg-[#3f3f3f] opacity-75 hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+  <div className="group bg-[#3f3f3f] hover:opacity-100 backdrop-blur-md relative overflow-hidden">
     <Image
-      src="/assets/lifestyle/cards/formationbass.png"
+      src="/assets/lifestyle/cards/formationbass_dualdriver_desktop.jpg"
       alt={who.title}
       fill
       className="object-cover transition duration-500 group-hover:scale-110"
@@ -132,9 +132,9 @@ export default function Section_2() {
   </div>
 
   {/* CARD 2 */}
-  <div className="group bg-[#1f2933] opacity-75 hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+  <div className="group bg-[#1f2933] hover: backdrop-blur-md relative overflow-hidden">
     <Image
-      src="/assets/lifestyle/cards/black-earbuds.png"
+      src="/assets/lifestyle/cards/white-headphone.png"
       alt={who.title}
       fill
       className="object-cover transition duration-500 group-hover:scale-110"
@@ -146,9 +146,9 @@ export default function Section_2() {
   </div>
 
   {/* CARD 3 */}
-  <div className="group bg-[#5a4636] opacity-85 hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+  <div className="group bg-[#5a4636] hover:opacity-100 backdrop-blur-md relative overflow-hidden">
     <Image
-      src="/assets/lifestyle/cards/egg-speaker.png"
+      src="/assets/lifestyle/cards/Formation-Wedge-Black_Image_4.jpg"
       alt={who.title}
       fill
       className="object-cover transition duration-500 group-hover:scale-110"
@@ -163,9 +163,9 @@ export default function Section_2() {
   <div className="col-span-2" />
 
   {/* CARD 4 */}
-  <div className="group bg-[#2a1f1a] opacity-95 hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+  <div className="group bg-[#2a1f1a] hover:opacity-100 backdrop-blur-md relative overflow-hidden">
     <Image
-      src="/assets/lifestyle/cards/black-speaker.png"
+      src="/assets/lifestyle/cards/Hero-C10_MkII_W.webp"
       alt={who.title}
       fill
       className="object-cover transition duration-500 group-hover:scale-110"

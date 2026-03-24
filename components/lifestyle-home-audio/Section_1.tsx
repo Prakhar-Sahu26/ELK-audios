@@ -98,7 +98,7 @@ export default function Section_1() {
           {/* GREEN (UNCHANGED) */}
           <a
             href={main.link}
-            className="group col-span-2 relative overflow-hidden bg-[#3b3f46] opacity-75 hover:opacity-100 flex items-center justify-center text-center px-6"
+            className="group col-span-2 relative overflow-hidden bg-[#3b3f46] hover:opacity-100 flex items-center justify-center text-center px-6"
           >
             {/* Bottom gray gradient overlay on hover */}
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
@@ -113,7 +113,7 @@ export default function Section_1() {
           <div
             onMouseEnter={() => setHovered(who.id)}
             onMouseLeave={() => setHovered(null)}
-            className="group bg-[#404040] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
+            className="group bg-[#404040] hover:opacity backdrop-blur-md text-black relative overflow-hidden"
           >
             <Image
               src="/assets/lifestyle/cards/black-earbuds.png"
@@ -134,7 +134,7 @@ export default function Section_1() {
             href={lifestyle.link}
             onMouseEnter={() => setHovered(lifestyle.id)}
             onMouseLeave={() => setHovered(null)}
-            className="group bg-[#2a2623] opacity-75 hover:opacity-100 backdrop-blur-md text-black relative overflow-hidden"
+            className="group bg-[#2a2623] hover:backdrop-blur-md text-black relative overflow-hidden"
           >
             <Image
               src="/assets/lifestyle/cards/ear_buds.png"

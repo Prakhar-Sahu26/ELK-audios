@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Section_5() {
   return (
     <>
-      <section className="relative w-full h-screen md:h-screen overflow-hidden bg-[#8B8CC4]">
+      <section className="relative w-full h-screen md:h-screen overflow-hidden bg-[#1F1D1B]">
 
         {/* 🔥 BACKGROUND IMAGE (ONLY DESKTOP) */}
         <div className="hidden md:block">
@@ -20,7 +20,7 @@ export default function Section_5() {
           {/* CARD 1 */}
           <a className="group bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
             <Image
-              src="/assets/lifestyle/cards/Hero-A10MkII-W.jpg"
+              src="/assets/lifestyle/cards/close_up_speaker.webp"
               alt="Speaker"
               fill
               className="object-cover transition duration-500 group-hover:scale-110"
@@ -55,7 +55,7 @@ export default function Section_5() {
           {/* CARD 3 */}
           <a className="group bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
             <Image
-              src="/assets/lifestyle/cards/PC_with_speakers.webp"
+              src="/assets/lifestyle/cards/Hero-A10MkII-W.jpg"
               alt="Speaker"
               fill
               className="object-cover transition duration-500 group-hover:scale-110"

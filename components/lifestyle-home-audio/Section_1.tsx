@@ -12,7 +12,7 @@ export default function Section_1() {
   const lifestyle = lifestyleCards[2];
 
   return (
-    <section className="relative w-full overflow-hidden md:h-screen">
+    <section className="relative w-full overflow-hidden md:min-h-screen md:h-[115vh]">
 
       {/* ================= MOBILE ================= */}
       <div className="md:hidden w-full aspect-[1/1] flex flex-col">
@@ -83,7 +83,7 @@ export default function Section_1() {
 
         {/* BACKGROUND */}
         <Image
-          src="/assets/lifestyle/background/earphone_wallpaper.jpg"
+          src="/assets/lifestyle/background/earbuds_bg.png"
           alt="Background"
           fill
           className="object-cover"

@@ -48,9 +48,9 @@ export default function Section_3() {
           <div />
           <div />
 
-          <a className="group bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
+          <a className="group bg-[#4F1F44] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
             <Image
-              src="/assets/lifestyle/cards/Buy-Stack_05-min.webp"
+             src="/assets/lifestyle/cards/formationbass_dualdriver_desktop.jpg"
               alt="Ear buds"
               fill
               className="object-cover transition duration-500 group-hover:scale-110"
@@ -63,7 +63,7 @@ export default function Section_3() {
             </p>
           </a>
 
-          <a className="aspect-square bg-[#6b2c1f] text-white p-4 flex items-start justify-center items-center text-center">
+          <a className="aspect-square bg-[#4F271F] text-white p-4 flex items-start justify-center items-center text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At, id ipsum. Id laboriosam vitae reiciendis ipsum odit iste delectus vero incidunt nam iure, quis quae numquam eos! Eum velit placeat molestias veniam culpa iste repellat maiores officia? Provident reiciendis ex itaque dolor magni nemo, nulla blanditiis qui  iusto?
           </a>
 

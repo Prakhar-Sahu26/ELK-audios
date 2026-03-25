@@ -97,16 +97,16 @@ export default function Section_2() {
       </div>
 
       {/* ================= DESKTOP ================= */}
-      <div className="hidden md:block w-full h-full">
+      <div className="hidden md:block w-full h-full bg-[#4F271F]">
 
         {/* BACKGROUND */}
-        <Image
+        {/* <Image
           src="/assets/lifestyle/background/backgorund__.png"
           alt=""
           fill
           priority
           className="object-cover"
-        />
+        /> */}
 
         <div className="absolute inset-0 z-0" />
 
@@ -118,9 +118,10 @@ export default function Section_2() {
   <div className="row-span-2 col-span-1 relative overflow-hidden" />
 
   {/* CARD 1 */}
-  <div className="group bg-[#3f3f3f] hover:opacity-100 backdrop-blur-md relative overflow-hidden">
+  <div className="group bg-[#6B5A4E] hover:opacity-100 backdrop-blur-md relative overflow-hidden">
     <Image
-      src="/assets/lifestyle/cards/formationbass_dualdriver_desktop.jpg"
+      // src="/assets/lifestyle/cards/formationbass_dualdriver_desktop.jpg"
+       src="/assets/lifestyle/cards/Buy-Stack_05-min.webp"
       alt={who.title}
       fill
       className="object-cover transition duration-500 group-hover:scale-110"

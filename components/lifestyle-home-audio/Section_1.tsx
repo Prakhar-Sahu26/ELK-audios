@@ -31,7 +31,7 @@ export default function Section_1() {
         <a className="bg-[#3b3f46]/90 flex flex-1 items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20" />
           <p className="relative z-10 text-white text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit...
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, iure?ipsum dolor sit amet consectetur adipisicing elit...
           </p>
         </a>
 
@@ -105,7 +105,7 @@ export default function Section_1() {
 
             {/* Always visible text */}
             <p className="relative z-10 text-white text-2xl font-semibold px-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit...
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, iure?ipsum dolor sit amet consectetur adipisicing elit...
             </p>
           </a>
 

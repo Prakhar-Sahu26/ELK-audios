@@ -28,7 +28,7 @@ export default function Section_1() {
         <div className="absolute inset-0 z-0" />
 
         {/* GREEN (UNCHANGED) */}
-        <a className="bg-[#3b3f46]/90 flex flex-1 items-center justify-center relative overflow-hidden">
+        <a className="bg-[#3b3f46] flex flex-1 items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20" />
           <p className="relative z-10 text-white text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit...
@@ -39,11 +39,11 @@ export default function Section_1() {
         <div className="flex flex-1">
 
           {/* WHITE */}
-          <a className="group bg-[#404040]/90 w-1/2 relative overflow-hidden">
+          <a className="group bg-[#404040] w-1/2 relative overflow-hidden">
 
             {/* IMAGE */}
             <Image
-              src="/assets/lifestyle/cards/black-background_speaker.png"
+              src="/assets/lifestyle/cards/black-earbuds.png"
               alt={who.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"
@@ -59,10 +59,10 @@ export default function Section_1() {
           </a>
 
           {/* BEIGE */}
-          <a className="group bg-[#2a2623]/90 w-1/2 relative overflow-hidden">
+          <a className="group bg-[#2a2623] w-1/2 relative overflow-hidden">
 
             <Image
-              src="/assets/lifestyle/cards/white-headphone.png"
+              src="/assets/lifestyle/cards/ear_buds.png"
               alt={lifestyle.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"

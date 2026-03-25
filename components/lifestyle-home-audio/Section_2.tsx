@@ -19,27 +19,27 @@ export default function Section_2() {
     <section className="relative w-full overflow-hidden md:h-screen">
 
       {/* ================= MOBILE ================= */}
-      <div className="md:hidden relative w-full aspect-[1/2] overflow-hidden">
+      <div className="md:hidden relative w-full aspect-[1/2] overflow-hidden bg-[#4F271F] ">
 
         {/* BACKGROUNDS */}
-        <div className="absolute top-0 left-0 w-full h-1/2">
+        {/* <div className="absolute top-0 left-0 w-full h-1/2">
           <Image src="/assets/lifestyle/background/Klipsch-R-41PM-best-powered-monitors-with-TV.webp" alt="" fill className="object-cover scale-100" />
-        </div>
+        </div> */}
 
-        <div className="absolute bottom-0 left-0 w-full h-1/2">
+        {/* <div className="absolute bottom-0 left-0 w-full h-1/2">
           <Image src="/assets/lottie/3.jpeg" alt="" fill className="object-cover" />
-        </div>
+        </div> */}
 
-        <div className="absolute inset-0 bg-black/20 z-0" />
+        <div className="absolute inset-0 z-0" />
 
         {/* GRID */}
         <div className="relative z-10 grid grid-cols-2 grid-rows-4 h-full">
 
           <div />
           {/* GREEN (UNCHANGED) */}
-          <a className="group bg-[#3f3f3f]/8  0 relative overflow-hidden">
+          <a className="group bg-[#6B5A4E] relative overflow-hidden">
             <Image
-              src="/assets/lifestyle/cards/formationbass.png"
+              src="/assets/lifestyle/cards/Buy-Stack_05-min.webp"
               alt={who.title}
               fill
               className="object-cover scale-90 transition duration-500 group-hover:scale-100"
@@ -53,9 +53,9 @@ export default function Section_2() {
           <div />
 
           {/* CARD 2 */}
-          <a className="group bg-[#1f2933]/70 relative overflow-hidden">
+          <a className="group bg-[#1f2933] relative overflow-hidden">
             <Image
-              src="/assets/lifestyle/cards/black-earbuds.png"
+              src="/assets/lifestyle/cards/white-headphone.png"
               alt={lifestyle.title}
               fill
               className="object-cover scale-80 transition duration-500 group-hover:scale-100"
@@ -70,7 +70,7 @@ export default function Section_2() {
           {/* CARD 3 */}
           <a className="group bg-[#5a4636]/80 relative overflow-hidden">
             <Image
-              src="/assets/lifestyle/cards/egg-speaker.png"
+              src="/assets/lifestyle/cards/Formation-Wedge-Black_Image_4.jpg"
               alt={who.title}
               fill
               className="object-cover transition duration-500 group-hover:scale-110"
@@ -83,13 +83,13 @@ export default function Section_2() {
           {/* CARD 4 */}
           <a className="group bg-[#2a1f1a]/80 relative overflow-hidden">
             <Image
-              src="/assets/lifestyle/cards/black-speaker.png"
+              src="/assets/lifestyle/cards/Hero-C10_MkII_W.webp"
               alt={who.title}
               fill
-              className="object-cover transition duration-500 group-hover:scale-110"
+              className="object-cover scale-100 transition duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
-            <p className="absolute inset-0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-2">
+            <p className="absolute inset- 0 flex items-center justify-center text-white text-center z-10 opacity-0 group-hover:opacity-100 transition duration-300 px-2">
               {who.title}
             </p>
           </a>

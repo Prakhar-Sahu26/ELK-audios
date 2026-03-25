@@ -18,7 +18,7 @@ export default function Section_5() {
         <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 h-auto md:h-full">
 
           {/* CARD 1 */}
-          <a className="group bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
+          <a className="group aspect-square md:aspect-auto bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
             <Image
               src="/assets/lifestyle/cards/close_up_speaker.webp"
               alt="Speaker"
@@ -34,7 +34,7 @@ export default function Section_5() {
           </a>
 
           {/* CARD 2 */}
-          <a className="group bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
+          <a className="group aspect-square md:aspect-auto bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
             <Image
               src="/assets/lifestyle/cards/AP_Hero_-_Drumfire_W-2.jpg"
               alt="Speaker"
@@ -53,7 +53,7 @@ export default function Section_5() {
           <div className="hidden md:block md:col-span-2" />
 
           {/* CARD 3 */}
-          <a className="group bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
+          <a className="group aspect-square md:aspect-auto bg-[#ffffff] opacity-100 hover:opacity-90 backdrop-blur-md text-black relative overflow-hidden">
             <Image
               src="/assets/lifestyle/cards/Hero-A10MkII-W.jpg"
               alt="Speaker"

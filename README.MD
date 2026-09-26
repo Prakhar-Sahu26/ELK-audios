@@ -73,7 +73,7 @@ The home page combines a full-screen hero experience with:
 
 ### Home
 
-![Elk Audios Home Page](./public/screenshot/home.png)
+![Elk Audios Home Page](./public/screenshots/home.png)
 
 ---
 
@@ -85,7 +85,7 @@ The page uses a full-screen visual background with scroll-driven behavior. As th
 
 ### About
 
-![About Elk Audios](./public/screenshot/about.png)
+![About Elk Audios](./public/screenshots/about.png)
 
 ---
 
@@ -102,11 +102,11 @@ Each category uses a large background image, overlay treatment, centered typogra
 
 ### Boutique Architectural
 
-![Boutique Architectural](./public/screenshot/boutique-architectural.png)
+![Boutique Architectural](./public/screenshots/boutique-architectural.png)
 
 ### Commercial PAVA / AV
 
-![Commercial PAVA / AV](./public/screenshot/commercial-pava-av.png)
+![Commercial PAVA / AV](./public/screenshots/commercial-pava-av.png)
 
 ---
 
@@ -120,9 +120,9 @@ A recorded visual walkthrough is also included in the working project.
 
 ### Lifestyle Home Audio
 
-<video src="./public/screenshot/lifestyle-home-audio.mp4" controls width="100%"></video>
+<video src="./public/screenshots/lifestyle-home-audio.mp4" controls width="100%"></video>
 
-[Open the Lifestyle Home Audio video](./public/screenshot/lifestyle-home-audio.mp4)
+[Open the Lifestyle Home Audio video](./public/screenshots/lifestyle-home-audio.mp4)
 
 ---
 
@@ -140,7 +140,7 @@ The implementation includes custom parallax and horizontal-scroll hooks to contr
 
 ### Boutique Architectural
 
-![Boutique Architectural](./public/screenshot/boutique-architectural.png)
+![Boutique Architectural](./public/screenshots/boutique-architectural.png)
 
 ---
 
@@ -150,7 +150,7 @@ The Commercial PAVA / AV page is built as a visual presentation with large image
 
 ### Commercial PAVA / AV
 
-![Commercial PAVA / AV](./public/screenshot/commercial-pava-av.png)
+![Commercial PAVA / AV](./public/screenshots/commercial-pava-av.png)
 
 ---
 
@@ -173,7 +173,7 @@ The server validates the submitted fields and uses the Google Sheets API to appe
 
 ### Contact
 
-![Contact Page](./public/screenshot/contact.png)
+![Contact Page](./public/screenshots/contact.png)
 
 ---
 

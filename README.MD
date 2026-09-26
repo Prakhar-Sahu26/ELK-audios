@@ -106,7 +106,7 @@ Each category uses a large background image, overlay treatment, centered typogra
 
 ### Commercial PAVA / AV
 
-![Commercial PAVA / AV](./public/screenshots/commercial-pava-av.png)
+![Commercial PAVA / AV](./public/screenshots/commercial-pava-av_1.png)
 
 ---
 
@@ -120,11 +120,9 @@ A recorded visual walkthrough is also included in the working project.
 
 ### Lifestyle Home Audio
 
-<video src="./public/screenshots/lifestyle-home-audio.mp4" controls width="100%"></video>
+![Lifestyle Home Audio](./public/screenshots/lifestyle-home-audio.png)
 
-[Open the Lifestyle Home Audio video](./public/screenshots/lifestyle-home-audio.mp4)
-
----
+🎥 **[Watch the full interaction walkthrough](./public/screenshots/lifestyle-home-audio.mp4)**
 
 ## 5. Boutique Architectural
 
@@ -140,7 +138,7 @@ The implementation includes custom parallax and horizontal-scroll hooks to contr
 
 ### Boutique Architectural
 
-![Boutique Architectural](./public/screenshots/boutique-architectural.png)
+![Boutique Architectural](./public/screenshots/boutique-architectural_1.png)
 
 ---
 
